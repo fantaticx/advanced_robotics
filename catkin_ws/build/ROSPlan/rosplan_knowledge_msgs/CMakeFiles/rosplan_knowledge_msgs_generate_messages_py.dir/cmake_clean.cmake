@@ -1,0 +1,40 @@
+file(REMOVE_RECURSE
+  "/home/thomas/Documents/university/ar/catkin_ws/devel/lib/python3/dist-packages/rosplan_knowledge_msgs/msg/_DomainAssignment.py"
+  "/home/thomas/Documents/university/ar/catkin_ws/devel/lib/python3/dist-packages/rosplan_knowledge_msgs/msg/_DomainFormula.py"
+  "/home/thomas/Documents/university/ar/catkin_ws/devel/lib/python3/dist-packages/rosplan_knowledge_msgs/msg/_DomainInequality.py"
+  "/home/thomas/Documents/university/ar/catkin_ws/devel/lib/python3/dist-packages/rosplan_knowledge_msgs/msg/_DomainOperator.py"
+  "/home/thomas/Documents/university/ar/catkin_ws/devel/lib/python3/dist-packages/rosplan_knowledge_msgs/msg/_ExprBase.py"
+  "/home/thomas/Documents/university/ar/catkin_ws/devel/lib/python3/dist-packages/rosplan_knowledge_msgs/msg/_ExprComposite.py"
+  "/home/thomas/Documents/university/ar/catkin_ws/devel/lib/python3/dist-packages/rosplan_knowledge_msgs/msg/_KnowledgeItem.py"
+  "/home/thomas/Documents/university/ar/catkin_ws/devel/lib/python3/dist-packages/rosplan_knowledge_msgs/msg/_ProbabilisticEffect.py"
+  "/home/thomas/Documents/university/ar/catkin_ws/devel/lib/python3/dist-packages/rosplan_knowledge_msgs/msg/_StatusUpdate.py"
+  "/home/thomas/Documents/university/ar/catkin_ws/devel/lib/python3/dist-packages/rosplan_knowledge_msgs/msg/__init__.py"
+  "/home/thomas/Documents/university/ar/catkin_ws/devel/lib/python3/dist-packages/rosplan_knowledge_msgs/srv/_GenerateProblemService.py"
+  "/home/thomas/Documents/university/ar/catkin_ws/devel/lib/python3/dist-packages/rosplan_knowledge_msgs/srv/_GetAttributeService.py"
+  "/home/thomas/Documents/university/ar/catkin_ws/devel/lib/python3/dist-packages/rosplan_knowledge_msgs/srv/_GetDomainAttributeService.py"
+  "/home/thomas/Documents/university/ar/catkin_ws/devel/lib/python3/dist-packages/rosplan_knowledge_msgs/srv/_GetDomainNameService.py"
+  "/home/thomas/Documents/university/ar/catkin_ws/devel/lib/python3/dist-packages/rosplan_knowledge_msgs/srv/_GetDomainOperatorDetailsService.py"
+  "/home/thomas/Documents/university/ar/catkin_ws/devel/lib/python3/dist-packages/rosplan_knowledge_msgs/srv/_GetDomainOperatorService.py"
+  "/home/thomas/Documents/university/ar/catkin_ws/devel/lib/python3/dist-packages/rosplan_knowledge_msgs/srv/_GetDomainPredicateDetailsService.py"
+  "/home/thomas/Documents/university/ar/catkin_ws/devel/lib/python3/dist-packages/rosplan_knowledge_msgs/srv/_GetDomainTypeService.py"
+  "/home/thomas/Documents/university/ar/catkin_ws/devel/lib/python3/dist-packages/rosplan_knowledge_msgs/srv/_GetEnumerableTypeService.py"
+  "/home/thomas/Documents/university/ar/catkin_ws/devel/lib/python3/dist-packages/rosplan_knowledge_msgs/srv/_GetInstanceService.py"
+  "/home/thomas/Documents/university/ar/catkin_ws/devel/lib/python3/dist-packages/rosplan_knowledge_msgs/srv/_GetMetricService.py"
+  "/home/thomas/Documents/university/ar/catkin_ws/devel/lib/python3/dist-packages/rosplan_knowledge_msgs/srv/_GetRDDLFluentType.py"
+  "/home/thomas/Documents/university/ar/catkin_ws/devel/lib/python3/dist-packages/rosplan_knowledge_msgs/srv/_GetRDDLImmediateReward.py"
+  "/home/thomas/Documents/university/ar/catkin_ws/devel/lib/python3/dist-packages/rosplan_knowledge_msgs/srv/_GetRDDLParams.py"
+  "/home/thomas/Documents/university/ar/catkin_ws/devel/lib/python3/dist-packages/rosplan_knowledge_msgs/srv/_KnowledgeQueryService.py"
+  "/home/thomas/Documents/university/ar/catkin_ws/devel/lib/python3/dist-packages/rosplan_knowledge_msgs/srv/_KnowledgeUpdateService.py"
+  "/home/thomas/Documents/university/ar/catkin_ws/devel/lib/python3/dist-packages/rosplan_knowledge_msgs/srv/_KnowledgeUpdateServiceArray.py"
+  "/home/thomas/Documents/university/ar/catkin_ws/devel/lib/python3/dist-packages/rosplan_knowledge_msgs/srv/_ReloadRDDLDomainProblem.py"
+  "/home/thomas/Documents/university/ar/catkin_ws/devel/lib/python3/dist-packages/rosplan_knowledge_msgs/srv/_SetFloat.py"
+  "/home/thomas/Documents/university/ar/catkin_ws/devel/lib/python3/dist-packages/rosplan_knowledge_msgs/srv/_SetInt.py"
+  "/home/thomas/Documents/university/ar/catkin_ws/devel/lib/python3/dist-packages/rosplan_knowledge_msgs/srv/_SetNamedBool.py"
+  "/home/thomas/Documents/university/ar/catkin_ws/devel/lib/python3/dist-packages/rosplan_knowledge_msgs/srv/__init__.py"
+  "CMakeFiles/rosplan_knowledge_msgs_generate_messages_py"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang )
+  include(CMakeFiles/rosplan_knowledge_msgs_generate_messages_py.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

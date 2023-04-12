@@ -8,6 +8,9 @@
 
 # modified environment variables
 export CMAKE_PREFIX_PATH="/home/thomas/Documents/university/ar/catkin_ws/devel:$CMAKE_PREFIX_PATH"
+export LD_LIBRARY_PATH='/home/thomas/Documents/university/ar/catkin_ws/devel/lib:/opt/ros/noetic/lib:/opt/ros/noetic/lib/x86_64-linux-gnu'
+export PKG_CONFIG_PATH="/home/thomas/Documents/university/ar/catkin_ws/devel/lib/pkgconfig:$PKG_CONFIG_PATH"
 export PWD='/home/thomas/Documents/university/ar/catkin_ws/build'
+export PYTHONPATH="/home/thomas/Documents/university/ar/catkin_ws/devel/lib/python3/dist-packages:$PYTHONPATH"
 export ROSLISP_PACKAGE_DIRECTORIES='/home/thomas/Documents/university/ar/catkin_ws/devel/share/common-lisp'
 export ROS_PACKAGE_PATH="/home/thomas/Documents/university/ar/catkin_ws/src:$ROS_PACKAGE_PATH"

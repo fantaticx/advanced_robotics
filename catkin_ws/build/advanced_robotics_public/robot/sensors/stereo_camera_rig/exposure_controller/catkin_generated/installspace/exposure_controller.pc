@@ -1,0 +1,8 @@
+prefix=/home/thomas/Documents/university/ar/catkin_ws/install
+
+Name: exposure_controller
+Description: Description of exposure_controller
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

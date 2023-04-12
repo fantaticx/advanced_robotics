@@ -1,0 +1,8 @@
+# generated from catkin/cmake/template/pkg.context.pc.in
+CATKIN_PACKAGE_PREFIX = ""
+PROJECT_PKG_CONFIG_INCLUDE_DIRS = "${prefix}/include;/usr/include/suitesparse".split(';') if "${prefix}/include;/usr/include/suitesparse" != "" else []
+PROJECT_CATKIN_DEPENDS = "cmake_modules;nav_core;nav_msgs;pluginlib;roscpp;rospy;std_msgs;tf;costmap_2d;base_local_planner;sensor_msgs;cv_bridge;std_msgs;image_transport;tf2_eigen".replace(';', ' ')
+PKG_CONFIG_LIBRARIES_WITH_PREFIX = "-lopt_local_planner;-lamd;-lbtf;-lcamd;-lccolamd;-lcholmod;-lcolamd;-lcxsparse;-lklu;-lumfpack;-lspqr;/opt/ros/noetic/lib/libg2o_csparse_extension.so;/opt/ros/noetic/lib/libg2o_core.so;/opt/ros/noetic/lib/libg2o_stuff.so;/opt/ros/noetic/lib/libg2o_types_slam2d.so;/opt/ros/noetic/lib/libg2o_types_slam3d.so;/opt/ros/noetic/lib/libg2o_solver_cholmod.so;/opt/ros/noetic/lib/libg2o_solver_pcg.so;/opt/ros/noetic/lib/libg2o_solver_csparse.so;/opt/ros/noetic/lib/libg2o_incremental.so".split(';') if "-lopt_local_planner;-lamd;-lbtf;-lcamd;-lccolamd;-lcholmod;-lcolamd;-lcxsparse;-lklu;-lumfpack;-lspqr;/opt/ros/noetic/lib/libg2o_csparse_extension.so;/opt/ros/noetic/lib/libg2o_core.so;/opt/ros/noetic/lib/libg2o_stuff.so;/opt/ros/noetic/lib/libg2o_types_slam2d.so;/opt/ros/noetic/lib/libg2o_types_slam3d.so;/opt/ros/noetic/lib/libg2o_solver_cholmod.so;/opt/ros/noetic/lib/libg2o_solver_pcg.so;/opt/ros/noetic/lib/libg2o_solver_csparse.so;/opt/ros/noetic/lib/libg2o_incremental.so" != "" else []
+PROJECT_NAME = "opt_local_planner"
+PROJECT_SPACE_DIR = "/home/thomas/Documents/university/ar/catkin_ws/install"
+PROJECT_VERSION = "0.0.0"
