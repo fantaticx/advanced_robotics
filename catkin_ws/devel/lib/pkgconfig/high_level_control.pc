@@ -1,8 +1,0 @@
-prefix=/home/thomas/Documents/university/ar/catkin_ws/devel
-
-Name: high_level_control
-Description: Description of high_level_control
-Version: 0.0.0
-Cflags: -I/home/thomas/Documents/university/ar/catkin_ws/src/advanced_robotics_public/high_level_control/include
-Libs: -L${prefix}/lib 
-Requires: actionlib_msgs

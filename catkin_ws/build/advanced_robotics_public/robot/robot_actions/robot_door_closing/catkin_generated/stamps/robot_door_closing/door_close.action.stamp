@@ -1,8 +1,0 @@
-#goal definition
-string door_name
----
-#result definition
-string status
----
-#feedback
-int32[] status

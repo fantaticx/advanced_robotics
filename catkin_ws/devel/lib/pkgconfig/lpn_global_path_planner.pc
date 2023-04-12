@@ -1,8 +1,0 @@
-prefix=/home/thomas/Documents/university/ar/catkin_ws/devel
-
-Name: lpn_global_path_planner
-Description: Description of lpn_global_path_planner
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

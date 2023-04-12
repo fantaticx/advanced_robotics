@@ -1,2 +1,0 @@
-set(occupancy_grid_utils_MESSAGE_FILES "/home/thomas/Documents/university/ar/catkin_ws/src/advanced_robotics_public/occupancy_grid_utils/msg/OverlayClouds.msg;/home/thomas/Documents/university/ar/catkin_ws/src/advanced_robotics_public/occupancy_grid_utils/msg/NavigationFunction.msg;/home/thomas/Documents/university/ar/catkin_ws/src/advanced_robotics_public/occupancy_grid_utils/msg/LocalizedCloud.msg")
-set(occupancy_grid_utils_SERVICE_FILES "")
