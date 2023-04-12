@@ -1,0 +1,62 @@
+<?xml version="1.0" ?>
+<sdf version="1.4">
+  <world name="platform">
+    <include>
+      <uri>model://ground_plane</uri>
+    </include> 
+
+    <include>
+      <uri>model://sun</uri>
+    </include>
+
+    <include>
+      <uri>model://building</uri>
+    </include>
+    
+    <include>
+      <uri>model://simple_door</uri>
+      <pose>-11.6573 7.92765 1.0 0 0 -1.5707</pose>
+      <name>door1</name>
+    </include>
+    
+    <include>
+      <uri>model://simple_door</uri>
+      <pose>4.76747 3.7001 1.0 0 -0 0</pose>
+      <name>door2</name>
+    </include>
+    
+    <include>
+      <uri>model://simple_door</uri>
+      <pose>2.9477 2.5751 1.0 0 -0 -1.5707</pose>
+      <name>door3</name>
+    </include>
+    
+    <include>
+      <uri>model://simple_door</uri>
+      <pose>-3.1065 1.7675 1.0 0 -0 -1.5707</pose>
+      <name>door4</name>
+    </include>
+    
+    <include>
+      <uri>model://simple_door</uri>
+      <pose>-5.9957 0.93 1.0 0 -0 0</pose>
+      <name>door5</name>
+    </include>
+    
+    <include>
+      <uri>model://simple_door</uri>
+      <pose>2.7375 -7.2721 1.0 0 -0 -1.5707</pose>
+      <name>door6</name>
+    </include>
+
+
+
+    <!-- <plugin name='gazebo_occupancy_map' filename='libgazebo_2Dmap_plugin.so'>
+        <map_resolution>0.05</map_resolution> <!-- in meters, optional, default 0.1 - ->
+        <map_height>0.5</map_height>         <!-- in meters, optional, default 0.3 - ->
+        <map_size_x>40</map_size_x>          <!-- in meters, optional, default 10 - ->
+        <map_size_y>40</map_size_y>          <!-- in meters, optional, default 10 - ->
+    </plugin> -->
+
+  </world>
+</sdf>

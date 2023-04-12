@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+
+<launch>
+
+  <arg name="robot_namespace" default="/"/>
+
+  <arg name="x" default="0.0"/>
+  <arg name="y" default="0.0"/>
+  <arg name="z" default="0.0"/>
+  <arg name="yaw" default="0.0"/>
+
+  <arg name="full_laser_fov" default="false"/>
+  <arg name="imu_enabled" default="false"/>
+  <arg name="stereo_camera_enabled" default="false"/>
+  <arg name="hazard_cam_front_enabled" default="false"/>
+  <arg name="hazard_cam_rear_enabled" default="false"/>
+  <arg name="depth_camera_enabled" default="false"/>
+  <arg name="gps_enabled" default="false"/>
+  <arg name="front_laser_enabled" default="true" />
+  <arg name="front_cloud_enabled" default="false" />
+  <arg name="rear_cloud_enabled" default="false" />
+  
+  <!-- TF for switching the TF tree. Can be: base_link_real (ground truth from gazebo), base_link (odom), base_link_pf (for ass1), base_link_g2o (for ass2) -->
+  <arg name="tf_base_link" default="base_link" />
+  <arg name="tf_odom_frame" default="map" />
+
+  <group ns="$(arg robot_namespace)">
+
+    <!-- For single master bringup, run robot control on the gazebo master -->
+    <!-- Note that robot_platform_description/description.launch is already included in robot_platform_control/control.launch. -->
+    <group>
+      <include file="$(find robot_control)/launch/control.launch">
+        <arg name="robot_namespace" default="$(arg robot_namespace)"/>
+        <arg name="imu_enabled" value="$(arg imu_enabled)"/>
+        <arg name="stereo_camera_enabled" value="$(arg stereo_camera_enabled)"/>
+        <arg name="hazard_cam_front_enabled" value="$(arg hazard_cam_front_enabled)"/>
+        <arg name="hazard_cam_rear_enabled" value="$(arg hazard_cam_rear_enabled)"/>
+        <arg name="depth_camera_enabled" value="$(arg depth_camera_enabled)"/>
+        <arg name="gps_enabled" value="$(arg gps_enabled)"/>
+        <arg name="front_laser_enabled" value="$(arg front_laser_enabled)"/>
+        <arg name="front_cloud_enabled" value="$(arg front_cloud_enabled)"/>
+        <arg name="rear_cloud_enabled" value="$(arg rear_cloud_enabled)"/>
+        <arg name="full_laser_fov" value="$(arg full_laser_fov)"/>
+      </include>
+    </group>
+
+    <!-- Spawn robot in gazebo -->
+    <node name="spawn_robot_model" pkg="gazebo_ros" type="spawn_model"
+        args="-x $(arg x)
+              -y $(arg y)
+              -z $(arg z)
+              -Y $(arg yaw)
+              -unpause
+              -urdf
+              -param robot_description
+              -model $(arg robot_namespace)" />
+              
+     <!-- Send groundtruth data to tf -->
+       <node pkg="message_to_tf" type="message_to_tf" name="ground_truth_broadcaster" args="/ground_truth/state" >
+                <param name="child_frame_id"  type="string" value="base_link_real"/>
+                <param name="footprint_frame_id"  type="string" value=""/>
+       </node>  
+       
+       <node pkg="message_to_tf" type="message_to_tf" name="odom_broadcaster" args="/gazebo/odom" >
+                 <param name="child_frame_id"  type="string" value="base_link"/>
+                 <param name="frame_id"  type="string" value="$(arg tf_odom_frame)"/>
+                 <param name="footprint_frame_id"  type="string" value=""/>
+        </node>  
+       
+       <node pkg="tf" type="static_transform_publisher" name="base_linker_broadcaster" args="0 0 0 0 0 0 1 $(arg tf_base_link) base_link_robot 100" /> 
+     
+
+
+  </group>
+
+</launch>

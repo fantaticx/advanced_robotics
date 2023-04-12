@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+
+<launch>
+  <!-- disable husky's top plate -->
+  <env name="HUSKY_TOP_PLATE_ENABLED" value="false"/>
+  <arg name="full_laser_fov" default="false"/>
+  <arg name="robot_namespace" default="/"/>
+  <arg name="imu_enabled" default="false"/>
+  <arg name="stereo_camera_enabled" default="false"/>
+  <arg name="hazard_cam_front_enabled" default="false"/>
+  <arg name="hazard_cam_rear_enabled" default="false"/>
+  <arg name="depth_camera_enabled" default="false"/>
+  <arg name="gps_enabled" default="false"/>
+  <arg name="front_laser_enabled" default="false" />
+  <arg name="front_cloud_enabled" default="false" />
+  <arg name="rear_cloud_enabled" default="false" />
+  <arg name="x" default="0.0"/>
+  <arg name="y" default="0.0"/>
+  <arg name="z" default="0.0"/>
+  <arg name="yaw" default="0.0"/>
+
+
+  <param name="robot_description" command="$(find xacro)/xacro '$(find robot_description)/urdf/model.urdf.xacro'
+    --inorder
+    robot_namespace:=$(arg robot_namespace)
+    imu_enabled:=$(arg imu_enabled)
+    stereo_camera_enabled:=$(arg stereo_camera_enabled)
+    hazard_cam_front_enabled:=$(arg hazard_cam_front_enabled)
+    hazard_cam_rear_enabled:=$(arg hazard_cam_rear_enabled)
+    depth_camera_enabled:=$(arg depth_camera_enabled)
+    gps_enabled:=$(arg gps_enabled)
+    front_laser_enabled:=$(arg front_laser_enabled)
+    front_cloud_enabled:=$(arg front_cloud_enabled)
+    rear_cloud_enabled:=$(arg rear_cloud_enabled)
+    full_laser_fov:=$(arg full_laser_fov)
+    " />
+<!--
+    x_offset:=$(arg x)
+    y_offset:=$(arg x)
+    z_offset:=$(arg x)
+    yaw_offset:=$(arg x)
+    -->
+</launch>

@@ -1,0 +1,8 @@
+prefix=/home/thomas/Documents/university/ar/catkin_ws/install
+
+Name: robot_door_opening
+Description: Description of robot_door_opening
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: actionlib_msgs

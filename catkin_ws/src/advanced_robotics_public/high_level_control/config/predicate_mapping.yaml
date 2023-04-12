@@ -1,0 +1,3 @@
+predicate_mapping:
+    # TODO: define the mapping of the PDDL predicates here. 
+    # Map them to the desired positions on the map which are required for navigation/door handling

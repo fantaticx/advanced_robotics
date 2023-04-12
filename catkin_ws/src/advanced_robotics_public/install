@@ -1,0 +1,5 @@
+#! bin/bash
+apt-get install libsuitesparse-dev 
+
+# echo -e "\n\ndon't forget to source devel/setup.bash from your catkin_ws folder!!!\n"
+

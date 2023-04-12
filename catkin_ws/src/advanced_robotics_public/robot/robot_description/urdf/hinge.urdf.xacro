@@ -1,0 +1,110 @@
+<?xml version="1.0" ?>
+
+<robot name="hinge" xmlns:xacro="http://ros.org/wiki/xacro">
+
+
+  <!-- Includes --> 
+  <!-- <xacro:include filename="$(find robot_description)/urdf/materials.xacro" /> -->
+
+  <xacro:property name="M_PI"     value="3.1415926535897931" />
+  
+  <xacro:macro name="hinge" params="prefix angle:=0.0 parent_link *joint_pose">
+
+    <link name="${prefix}hinge_top_mount" />
+    <link name="${prefix}hinge_base_mount" />
+   
+
+    <joint name="${prefix}hinge_base_mount_joint" type="fixed">
+      <parent link="${parent_link}"/>
+      <child link="${prefix}hinge_base_mount"/>
+      <xacro:insert_block name="joint_pose"/>
+    </joint>
+
+    <joint name="${prefix}hinge_base_joint" type="fixed">
+      <parent link="${prefix}hinge_base_mount"/>
+      <child link="${prefix}hinge_base_link"/>
+      <origin rpy="0  0  0" xyz="0 0 0.03"/>
+    </joint>
+
+    <joint name="${prefix}hinge_joint" type="fixed">
+      <parent link="${prefix}hinge_base_link"/>
+      <child link="${prefix}hinge_top_link"/>
+      <origin rpy="0  ${angle}  0" xyz="0  0      0"/>
+    </joint>
+
+    <joint name="${prefix}hinge_top_mount_joint" type="fixed">
+      <parent link="${prefix}hinge_top_link"/>
+      <child link="${prefix}hinge_top_mount"/>
+      <origin rpy="0  0  0" xyz="0 0 0.03"/>
+    </joint>
+
+
+    <link name="${prefix}hinge_top_link">
+      <inertial>
+        <mass value="0.21281908244530284"/>
+        <origin rpy="0  0  0" xyz="0  0  0"/>
+        <inertia ixx="0.00010991746458418506" ixy="1.0709271669509413e-16" ixz="-8.306063554749527e-08" iyy="0.0001226779961532752" iyz="6.559907777061436e-16" izz="6.581616425688885e-05"/>
+      </inertial>
+      <collision name="${prefix}hinge_base_link_collision">
+        <origin rpy="0  ${M_PI}  ${M_PI}" xyz="0 0.0027991644581398835 0.014818049220755886"/>
+        <!-- <origin rpy="0  ${M_PI}  ${M_PI/2}" xyz="0.00279  0      -0.01481"/> -->
+        <geometry>
+          <mesh filename="package://robot_description/meshes/hinge_base_link.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+      </collision>
+      <visual name="${prefix}hinge_base_link_visual">
+        <!-- <origin rpy="0  ${M_PI}  ${M_PI/2}" xyz="0.00279  0      -0.01481"/> -->
+        <origin rpy="0  ${M_PI}  ${M_PI}" xyz="0 0.0027991644581398835 0.014818049220755886"/>
+        <geometry>
+          <mesh filename="package://robot_description/meshes/hinge_base_link.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="grey"/>
+      </visual>
+    </link>
+
+    <gazebo reference="${prefix}hinge_top_link">
+      <mu1 value="1.0"/>
+      <mu2 value="1.0"/>
+      <kp value="10000000.0" />
+      <kd value="1.0" />
+      <fdir1 value="1 0 0"/>
+      <material>Gazebo/Grey</material>
+    <!-- <selfCollide>true</selfCollide> -->
+    </gazebo>
+
+    <link name="${prefix}hinge_base_link">
+      <inertial>
+        <mass value="0.21281908244530284"/>
+        <origin rpy="0  0  0" xyz="0  0  0"/>
+        <inertia ixx="0.00010991746458418506" ixy="1.0709271669509413e-16" ixz="-8.306063554749527e-08" iyy="0.0001226779961532752" iyz="6.559907777061436e-16" izz="6.581616425688885e-05"/>
+      </inertial>
+      <collision name="${prefix}hinge_base_link_collision">
+        <!-- <origin rpy="0  0  ${M_PI/2}" xyz="0.00279  0      -0.01481"/> -->
+        <origin rpy="0  0  0" xyz="0 -0.0027991644581398835 -0.014818049220755886"/>
+        <geometry>
+          <mesh filename="package://robot_description/meshes/hinge_base_link.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+      </collision>
+      <visual name="${prefix}hinge_base_link_visual">
+        <!-- <origin rpy="0  0  ${M_PI/2}" xyz="0.00279  0      -0.01481"/> -->
+        <origin rpy="0  0  0" xyz="0 -0.0027991644581398835 -0.014818049220755886"/>
+        <geometry>
+          <mesh filename="package://robot_description/meshes/hinge_base_link.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="grey"/>
+      </visual>
+    </link>
+    
+    <gazebo reference="${prefix}hinge_base_link">
+      <mu1 value="1.0"/>
+      <mu2 value="1.0"/>
+      <kp value="10000000.0" />
+      <kd value="1.0" />
+      <fdir1 value="1 0 0"/>
+      <material>Gazebo/Grey</material>
+    <!-- <selfCollide>true</selfCollide> -->
+    </gazebo>
+
+  </xacro:macro>
+
+</robot>

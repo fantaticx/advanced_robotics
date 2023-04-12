@@ -1,0 +1,5 @@
+[submodule "rosserial"]
+	branch = noetic-devel
+	remote = origin
+    path = rosserial
+    url = git@git.ist.tugraz.at:ais/tedusar/rosserial.git

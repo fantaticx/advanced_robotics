@@ -1,0 +1,8 @@
+prefix=/home/thomas/Documents/university/ar/catkin_ws/devel
+
+Name: opt_local_planner
+Description: Description of opt_local_planner
+Version: 0.0.0
+Cflags: -I/home/thomas/Documents/university/ar/catkin_ws/src/advanced_robotics_public/opt_local_planner/include -I/usr/include/suitesparse
+Libs: -L${prefix}/lib -lopt_local_planner -lamd -lbtf -lcamd -lccolamd -lcholmod -lcolamd -lcxsparse -lklu -lumfpack -lspqr /opt/ros/noetic/lib/libg2o_csparse_extension.so /opt/ros/noetic/lib/libg2o_core.so /opt/ros/noetic/lib/libg2o_stuff.so /opt/ros/noetic/lib/libg2o_types_slam2d.so /opt/ros/noetic/lib/libg2o_types_slam3d.so /opt/ros/noetic/lib/libg2o_solver_cholmod.so /opt/ros/noetic/lib/libg2o_solver_pcg.so /opt/ros/noetic/lib/libg2o_solver_csparse.so /opt/ros/noetic/lib/libg2o_incremental.so
+Requires: cmake_modules nav_core nav_msgs pluginlib roscpp rospy std_msgs tf costmap_2d base_local_planner sensor_msgs cv_bridge std_msgs image_transport tf2_eigen

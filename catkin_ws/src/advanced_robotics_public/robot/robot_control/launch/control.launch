@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<launch>
+
+  <arg name="full_laser_fov" default="false"/>
+  <arg name="robot_namespace" default="/"/>
+  <arg name="imu_enabled" default="false"/>
+  <arg name="stereo_camera_enabled" default="false"/>
+  <arg name="hazard_cam_front_enabled" default="false"/>
+  <arg name="hazard_cam_rear_enabled" default="false"/>
+  <arg name="depth_camera_enabled" default="false"/>
+  <arg name="gps_enabled" default="false"/>
+  <arg name="front_laser_enabled" default="true" />
+  <arg name="front_cloud_enabled" default="false" />
+  <arg name="rear_cloud_enabled" default="false" />
+  <arg name="x" default="0.0"/>
+  <arg name="y" default="0.0"/>
+  <arg name="z" default="0.0"/>
+  <arg name="yaw" default="0.0"/>
+
+
+  <!-- Load robot description -->
+  <include file="$(find robot_description)/launch/description.launch" >
+    <arg name="robot_namespace" default="$(arg robot_namespace)"/>
+    <arg name="imu_enabled" default="$(arg imu_enabled)"/>
+    <arg name="stereo_camera_enabled" value="$(arg stereo_camera_enabled)"/>
+    <arg name="hazard_cam_front_enabled" value="$(arg hazard_cam_front_enabled)"/>
+    <arg name="hazard_cam_rear_enabled" value="$(arg hazard_cam_rear_enabled)"/>
+    <arg name="depth_camera_enabled" value="$(arg depth_camera_enabled)"/>
+    <arg name="gps_enabled" default="$(arg gps_enabled)"/>
+    <arg name="front_laser_enabled" value="$(arg front_laser_enabled)"/>
+    <arg name="front_cloud_enabled" value="$(arg front_cloud_enabled)"/>
+    <arg name="rear_cloud_enabled" value="$(arg rear_cloud_enabled)"/>
+    <arg name="x"  value="$(arg x)"/>
+    <arg name="y"  value="$(arg y)"/>
+    <arg name="z"  value="$(arg z)"/>
+    <arg name="yaw"  value="$(arg yaw)"/>
+    <arg name="full_laser_fov" value="$(arg full_laser_fov)"/>
+  </include>
+
+  <!-- Load controller configuration -->
+  <!-- <rosparam command="load" file="$(find robot_control)/config/four_wheel_control.yaml" /> -->
+  <rosparam command="load" file="$(find robot_control)/config/control.yaml" />
+
+  <!-- Spawn controllers -->
+  <node name="base_controller_spawner" pkg="controller_manager" type="spawner"
+        args="robot_joint_publisher robot_velocity_controller"/>
+
+  <!-- Start EKF for localization -->
+  <!--<node pkg="robot_localization" type="ekf_localization_node" name="ekf_localization">
+    <rosparam command="load" file="$(find robot_control)/config/localization.yaml" />
+  </node> -->
+
+  <node pkg="interactive_marker_twist_server" type="marker_server" name="twist_marker_server" output="screen"/>
+
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
+
+  <node pkg="twist_mux" type="twist_mux" name="twist_mux">
+    <rosparam command="load" file="$(find robot_control)/config/twist_mux.yaml" />
+    <remap from="cmd_vel_out" to="robot_velocity_controller/cmd_vel"/>
+  </node>
+
+
+</launch>

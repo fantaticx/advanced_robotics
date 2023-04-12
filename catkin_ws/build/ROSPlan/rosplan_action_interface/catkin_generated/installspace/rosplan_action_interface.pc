@@ -1,0 +1,8 @@
+prefix=/home/thomas/Documents/university/ar/catkin_ws/install
+
+Name: rosplan_action_interface
+Description: Description of rosplan_action_interface
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

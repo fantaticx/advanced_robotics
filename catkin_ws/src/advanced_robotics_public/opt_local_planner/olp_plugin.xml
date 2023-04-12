@@ -1,0 +1,7 @@
+<library path="lib/libopt_local_planner">
+  <class name="opt_local_planner/OptimizationLocalPlanner" type="opt_local_planner::OptimizationLocalPlanner" base_class_type="nav_core::BaseLocalPlanner">
+    <description>
+      Implementation of Optimization based local path planner
+    </description>
+  </class>
+</library>

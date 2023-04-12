@@ -1,0 +1,436 @@
+<?xml version="1.0" ?>
+<robot name="robot" xmlns:xacro="http://ros.org/wiki/xacro">
+
+  
+  <xacro:arg name="robot_namespace" default="/" />
+  
+  <xacro:arg name="imu_enabled" default="false" />
+  <xacro:arg name="stereo_camera_enabled" default="false" />
+  <xacro:arg name="hazard_cam_front_enabled" default="false" />
+  <xacro:arg name="hazard_cam_rear_enabled" default="false" />
+  <xacro:arg name="depth_camera_enabled" default="false" />
+  <xacro:arg name="gps_enabled" default="false" />
+  <xacro:arg name="front_laser_enabled" default="false" />
+  <xacro:arg name="front_cloud_enabled" default="false" />
+  <xacro:arg name="rear_cloud_enabled" default="false" />
+  <xacro:arg name="full_laser_fov" default="false" />
+  
+
+  <xacro:property name="M_PI"     value="3.1415926535897931" />
+
+  
+  <!-- Included URDF/XACRO Files -->  
+  <xacro:include filename="$(find robot_description)/urdf/husky.urdf.xacro" />
+  <xacro:include filename="$(find robot_description)/urdf/materials.xacro" />
+  <xacro:include filename="$(find robot_description)/urdf/imu.urdf.xacro" />
+  <xacro:include filename="$(find robot_description)/urdf/laser.urdf.xacro" />
+  <!-- <xacro:include filename="$(find robot_description)/urdf/stereo_camera.urdf.xacro" /> -->
+  <xacro:include filename="$(find robot_description)/urdf/depth_camera.urdf.xacro" />
+  <xacro:include filename="$(find sick_laser_description)/urdf/mrs1000.urdf.xacro" />
+  <xacro:include filename="$(find stereo_camera_description)/urdf/stereo_camera.urdf.xacro" />
+  <xacro:include filename="$(find zed_camera_description)/urdf/zed_camera.urdf.xacro" />
+  <xacro:include filename="$(find robot_description)/urdf/hinge.urdf.xacro" />
+
+  <!-- Ground Truth -->
+  <gazebo>
+    <plugin name="p3d_base_controller" filename="libgazebo_ros_p3d.so">
+      <alwaysOn>true</alwaysOn>
+      <updateRate>10.0</updateRate>
+      <bodyName>base_link_robot</bodyName>
+      <topicName>ground_truth/state</topicName>
+      <gaussianNoise>0.00</gaussianNoise>
+      <frameName>map</frameName>
+      <xyzOffsets>0 0 0</xyzOffsets>
+      <rpyOffsets>0 0 0</rpyOffsets>
+    </plugin>
+  </gazebo>
+  
+  <gazebo>
+    <plugin name="p3d_base_controller" filename="libgazebo_ros_p3d.so">
+      <alwaysOn>true</alwaysOn>
+      <updateRate>10.0</updateRate>
+      <bodyName>base_link_robot</bodyName>
+      <topicName>gazebo/odom</topicName>
+      <gaussianNoiseLinear>0.013</gaussianNoiseLinear>
+      <gaussianNoiseAngular>0.033</gaussianNoiseAngular>
+      <frameName>map</frameName>
+      <xyzOffsets>0 0 0</xyzOffsets>
+      <rpyOffsets>0 0 0</rpyOffsets>
+    </plugin>
+  </gazebo>
+
+  <!-- Mounting Frame  -->
+  <link name="mounting_frame">    
+      <visual>
+        <origin xyz="0 0 -0.03" rpy="0 0 0" />
+        <geometry>
+          <box size="0.8 0.58 0.06"/>
+        </geometry>
+        <material name="grey"/>
+      </visual>
+      <collision>
+        <origin xyz="0 0 -0.03" rpy="0 0 0" />
+        <geometry>
+          <box size="0.8 0.58 0.06"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <gazebo reference="mounting_frame">
+      <mu1 value="1.0"/>
+      <mu2 value="1.0"/>
+      <kp value="10000000.0" />
+      <kd value="1.0" />
+      <fdir1 value="1 0 0"/>
+      <material>Gazebo/Grey</material>
+    </gazebo>
+
+    <joint name="mounting_frame_joint" type="fixed">
+      <origin xyz="-0.26 0 0.06" rpy = "0 0 0"/>
+      <parent link="user_rail_link" />
+      <child link="mounting_frame" />
+    </joint>
+ 
+  
+  <!-- IMU -->
+  <xacro:if value="$(arg imu_enabled)">
+    <xacro:robot_imu imu_prefix="" parent_link="base_link_robot">
+      <origin xyz="$(optenv ROBOT_IMU_XYZ 0.0 0 0.2)" rpy="$(optenv ROBOT_IMU_RPY 0 0 0)" />
+    </xacro:robot_imu>
+  </xacro:if>
+
+  <!-- Stereo camera -->
+  <xacro:if value="$(arg stereo_camera_enabled)">
+    <xacro:hinge prefix="stereo_" angle="${M_PI/12}" parent_link="stereo_gantry3">
+      <origin xyz="0 0 0.02" rpy = "0 0 0"/>
+    </xacro:hinge>
+
+    <link name="stereo_gantry1">    
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <box size="0.04 0.04 0.242"/>
+        </geometry>
+        <material name="grey"/>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <box size="0.04 0.04 0.242"/>
+        </geometry>
+      </collision>
+    </link>
+    
+    <gazebo reference="stereo_gantry1">
+      <mu1 value="1.0"/>
+      <mu2 value="1.0"/>
+      <kp value="10000000.0" />
+      <kd value="1.0" />
+      <fdir1 value="1 0 0"/>
+      <material>Gazebo/Grey</material>
+    </gazebo>
+
+    <joint name="stereo_gantry1_joint" type="fixed">
+      <origin xyz="0.2216 -0.27 0.121" rpy = "0 0 0"/>
+      <parent link="mounting_frame" />
+      <child link="stereo_gantry1" />
+    </joint>
+
+    <link name="stereo_gantry2">    
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <box size="0.04 0.04 0.242"/>
+        </geometry>
+        <material name="grey"/>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <box size="0.04 0.04 0.242"/>
+        </geometry>
+      </collision>
+    </link>
+    
+    <gazebo reference="stereo_gantry2">
+      <mu1 value="1.0"/>
+      <mu2 value="1.0"/>
+      <kp value="10000000.0" />
+      <kd value="1.0" />
+      <fdir1 value="1 0 0"/>
+      <material>Gazebo/Grey</material>
+    </gazebo>
+
+    <joint name="stereo_gantry2_joint" type="fixed">
+      <origin xyz="0.2216 0.27 0.121" rpy = "0 0 0"/>
+      <parent link="mounting_frame" />
+      <child link="stereo_gantry2" />
+    </joint>
+
+    <link name="stereo_gantry3">    
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <box size="0.04 0.5 0.04"/>
+        </geometry>
+        <material name="grey"/>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <box size="0.04 0.5 0.04"/>
+        </geometry>
+      </collision>
+    </link>
+    
+    <gazebo reference="stereo_gantry3">
+      <mu1 value="1.0"/>
+      <mu2 value="1.0"/>
+      <kp value="10000000.0" />
+      <kd value="1.0" />
+      <fdir1 value="1 0 0"/>
+      <material>Gazebo/Grey</material>
+    </gazebo>
+
+    <joint name="stereo_gantry3_joint" type="fixed">
+      <origin xyz="0.2216 0 0.22" rpy = "0 0 0"/>
+      <parent link="mounting_frame" />
+      <child link="stereo_gantry3" />
+    </joint>
+    
+    <xacro:stereo_camera camera_name="stereo" parent_link="stereo_hinge_top_mount">
+      <origin xyz="0 0 0" rpy = "0 0 0"/>
+    </xacro:stereo_camera>
+  </xacro:if>
+
+  <!-- Hazard camera front -->
+  <xacro:if value="$(arg hazard_cam_front_enabled)">
+    <xacro:hinge prefix="front_" angle="-${7*M_PI/18}" parent_link="mounting_frame">
+      <origin xyz="0.4 0 -0.02" rpy = "0 ${M_PI/2} 0"/>
+    </xacro:hinge>
+
+    <link name="hazard_front_mount_block">    
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <box size="0.04 0.04 0.01"/>
+        </geometry>
+        <material name="m_white"/>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <box size="0.04 0.04 0.01"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <gazebo reference="hazard_front_mount_block">
+      <mu1 value="1.0"/>
+      <mu2 value="1.0"/>
+      <kp value="10000000.0" />
+      <kd value="1.0" />
+      <fdir1 value="1 0 0"/>
+      <material>Gazebo/White</material>
+    </gazebo>
+
+    <joint name="hazard_front_mount_block_joint" type="fixed">
+      <origin xyz="0.0 0 0.005" rpy = "0 0 0"/>
+      <parent link="front_hinge_top_mount" />
+      <child link="hazard_front_mount_block" />
+    </joint>
+    
+    <xacro:zed_camera camera_name="hazard_front" camera_model="zed2" parent_link="hazard_front_mount_block">
+      <origin xyz="0 0 0.005" rpy = "0 0 0"/>
+    </xacro:zed_camera>
+  </xacro:if>
+
+  <!-- Hazard camera rear -->
+  <xacro:if value="$(arg hazard_cam_rear_enabled)">
+    <xacro:hinge prefix="rear_" angle="${7*M_PI/18}" parent_link="mounting_frame">
+      <origin xyz="-0.4 0 -0.02" rpy = "0 -${M_PI/2} 0"/>
+    </xacro:hinge>
+
+    <link name="hazard_rear_mount_block">    
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <box size="0.04 0.04 0.01"/>
+        </geometry>
+        <material name="m_white"/>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <box size="0.04 0.04 0.01"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <gazebo reference="hazard_rear_mount_block">
+      <mu1 value="1.0"/>
+      <mu2 value="1.0"/>
+      <kp value="10000000.0" />
+      <kd value="1.0" />
+      <fdir1 value="1 0 0"/>
+      <material>Gazebo/White</material>
+    </gazebo>
+
+    <joint name="hazard_rear_mount_block_joint" type="fixed">
+      <origin xyz="0.0 0 0.005" rpy = "0 0 0"/>
+      <parent link="rear_hinge_top_mount" />
+      <child link="hazard_rear_mount_block" />
+    </joint>
+    
+    <xacro:zed_camera camera_name="hazard_rear" camera_model="zed2" parent_link="hazard_rear_mount_block">
+      <origin xyz="0 0 0.005" rpy = "0 0 ${M_PI}"/>
+    </xacro:zed_camera>
+    
+  </xacro:if>
+
+  <!-- Depth camera -->
+  <xacro:if value="$(arg depth_camera_enabled)">
+    <xacro:depth_camera parent_link="base_plate_link">
+      <origin xyz="0.80 0 0.46" rpy = "0 0 0"/>
+    </xacro:depth_camera>
+  </xacro:if>
+
+
+  <!-- GPS -->
+  <xacro:if value="$(arg gps_enabled)">
+    <gazebo>
+      <plugin name="gps_controller" filename="libhector_gazebo_ros_gps.so">
+        <robotNamespace>$(arg robot_namespace)</robotNamespace>
+        <updateRate>40</updateRate>
+        <bodyName>base_link_robot</bodyName>
+        <frameId>base_link_robot</frameId>
+        <topicName>navsat/fix</topicName>
+        <velocityTopicName>navsat/vel</velocityTopicName>
+        <referenceLatitude>49.9</referenceLatitude>
+        <referenceLongitude>8.9</referenceLongitude>
+        <referenceHeading>0</referenceHeading>
+        <referenceAltitude>0</referenceAltitude>
+        <drift>0.0001 0.0001 0.0001</drift>
+      </plugin>
+    </gazebo>
+  </xacro:if>
+
+  
+  <!-- Laser Front -->
+  <xacro:if value="$(arg front_cloud_enabled)">
+    <xacro:mrs1000 prefix="front_cloud_" parent_link="front_laser_pole">
+      <origin xyz="0 0 0" rpy = "0 0 0"/>
+    </xacro:mrs1000>
+    <link name="front_laser_pole">    
+      <visual>
+        <origin xyz="0 0 -0.0515" rpy="0 0 0" />
+        <geometry>
+          <cylinder length="0.103" radius="0.02"/>
+        </geometry>
+        <material name="grey"/>
+      </visual>
+      <collision>
+        <origin xyz="0 0 -0.0515" rpy="0 0 0" />
+        <geometry>
+          <cylinder length="0.103" radius="0.02"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <gazebo reference="front_laser_pole">
+      <mu1 value="1.0"/>
+      <mu2 value="1.0"/>
+      <kp value="10000000.0" />
+      <kd value="1.0" />
+      <fdir1 value="1 0 0"/>
+      <material>Gazebo/Grey</material>
+    </gazebo>
+
+    <joint name="front_laser_pole_joint" type="fixed">
+      <origin xyz="0.38 0.0 0.103" rpy = "0 0 0"/>
+      <parent link="mounting_frame" />
+      <child link="front_laser_pole" />
+    </joint>
+
+  </xacro:if>
+  
+  <xacro:if value="$(arg front_laser_enabled)">
+    <xacro:robot_laser prefix="front_" parent_link="front_laser_pole" full_fov="$(arg full_laser_fov)">
+      <origin xyz="0 0 0" rpy = "0 0 0"/>
+    </xacro:robot_laser>
+    <xacro:unless value="$(arg front_cloud_enabled)">
+      <link name="front_laser_pole">    
+        <visual>
+          <origin xyz="0 0 -0.0515" rpy="0 0 0" />
+          <geometry>
+            <cylinder length="0.103" radius="0.02"/>
+          </geometry>
+          <material name="grey"/>
+        </visual>
+        <collision>
+          <origin xyz="0 0 -0.0515" rpy="0 0 0" />
+          <geometry>
+            <cylinder length="0.103" radius="0.02"/>
+          </geometry>
+        </collision>
+      </link>
+
+      <gazebo reference="front_laser_pole">
+        <mu1 value="1.0"/>
+        <mu2 value="1.0"/>
+        <kp value="10000000.0" />
+        <kd value="1.0" />
+        <fdir1 value="1 0 0"/>
+        <material>Gazebo/Grey</material>
+      </gazebo>
+
+      <joint name="front_laser_pole_joint" type="fixed">
+        <origin xyz="0.38 0.0 0.103" rpy = "0 0 0"/>
+        <parent link="mounting_frame" />
+        <child link="front_laser_pole" />
+      </joint>
+    </xacro:unless>
+  </xacro:if>
+
+  
+  <!-- Laser Rear -->
+  <xacro:if value="$(arg rear_cloud_enabled)">
+    <xacro:mrs1000 prefix="rear_cloud_" parent_link="rear_laser_pole">
+      <origin xyz="0 0 0" rpy = "0 0 -${M_PI}"/>
+    </xacro:mrs1000>
+
+    <link name="rear_laser_pole">    
+      <visual>
+        <origin xyz="0 0 -0.0515" rpy="0 0 0" />
+        <geometry>
+          <cylinder length="0.103" radius="0.02"/>
+        </geometry>
+        <material name="grey"/>
+      </visual>
+      <collision>
+        <origin xyz="0 0 -0.0515" rpy="0 0 0" />
+        <geometry>
+          <cylinder length="0.103" radius="0.02"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <gazebo reference="rear_laser_pole">
+      <mu1 value="1.0"/>
+      <mu2 value="1.0"/>
+      <kp value="10000000.0" />
+      <kd value="1.0" />
+      <fdir1 value="1 0 0"/>
+      <material>Gazebo/Grey</material>
+    </gazebo>
+
+    <joint name="rear_laser_pole_joint" type="fixed">
+      <origin xyz="-0.38 -0.0 0.103" rpy = "0 0 0"/>
+      <parent link="mounting_frame" />
+      <child link="rear_laser_pole" />
+    </joint>
+
+  </xacro:if>
+
+
+</robot>
