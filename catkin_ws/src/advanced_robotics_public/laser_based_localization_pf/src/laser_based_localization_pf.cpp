@@ -41,6 +41,26 @@ void LaserBasedLocalizationPf::initParticles()
     max_x_position_ = static_cast<int>(map.info.width * map.info.resolution);
 
     //TODO
+    std::uniform_int_distribution<double> unif_x(0,max_x_position_);
+    std::uniform_int_distribution<double> unif_y(0,max_y_position_);
+    std::uniform_int_distribution<double> unif_theta(-1,1);
+    for(int i = 0; i < num_particles_; i++){
+        Particle p;
+        p.pose_.position.x = unif_x(rand);
+        p.pose_.position.y = unif_y(rand);
+        p.pose_.position.z = 0;
+        double theta = unif_theta(rand) * M_PI; 
+
+        tf::Quaternion q;
+        q.setRPY(0,0,theta);
+
+        p.pose_.orientation.w = q.getW();
+        p.pose_.orientation.x = q.getX();
+        p.pose_.orientation.y = q.getY();
+        p.pose_.orientation.z = q.getZ();
+        p.weight_ = 1.0;
+    }
+
     
     // 1.) Initialize the Likelihood Field
     // 2.) Initialize the Sample Set
@@ -185,6 +205,10 @@ void LaserBasedLocalizationPf::mapCallback(const nav_msgs::OccupancyGrid::ConstP
 void LaserBasedLocalizationPf::normalizeParticleWeights()
 {
     // TODO Normalize the particles
+
+    for(Particle p : particles_){
+        p.weight_ = 1.0 / num_particles_;
+    }
 }
 
 void LaserBasedLocalizationPf::resamplingParticles()
