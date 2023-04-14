@@ -41,25 +41,21 @@ void LaserBasedLocalizationPf::initParticles()
     max_x_position_ = static_cast<int>(map.info.width * map.info.resolution);
 
     //TODO
-    std::uniform_int_distribution<double> unif_x(0,max_x_position_);
-    std::uniform_int_distribution<double> unif_y(0,max_y_position_);
-    std::uniform_int_distribution<double> unif_theta(-1,1);
     for(int i = 0; i < num_particles_; i++){
         Particle p;
-        p.pose_.position.x = unif_x(rand);
-        p.pose_.position.y = unif_y(rand);
-        p.pose_.position.z = 0;
-        double theta = unif_theta(rand) * M_PI; 
+        double x = ((double) std::rand() / ((double)RAND_MAX+1)) * (max_x_position_+1);
+        double y = ((double) std::rand() / ((double)RAND_MAX+1)) * (max_y_position_+1);
+        double theta = ((double) std::rand() / ((double)RAND_MAX+1)) * (2 * M_PI);
 
-        tf::Quaternion q;
-        q.setRPY(0,0,theta);
-
-        p.pose_.orientation.w = q.getW();
-        p.pose_.orientation.x = q.getX();
-        p.pose_.orientation.y = q.getY();
-        p.pose_.orientation.z = q.getZ();
+        p.updatePose(x,y,theta);
         p.weight_ = 1.0;
+        particles_.push_back(p);
     }
+
+    //std::cout<<(map.data.at(0)) << std::endl;
+
+
+
 
     
     // 1.) Initialize the Likelihood Field
@@ -68,7 +64,7 @@ void LaserBasedLocalizationPf::initParticles()
 
 
     //normalize weight of particles
-    normalizeParticleWeights();
+    //normalizeParticleWeights();
 }
 
 void LaserBasedLocalizationPf::updateOdometry(nav_msgs::Odometry odometry)
@@ -206,9 +202,17 @@ void LaserBasedLocalizationPf::normalizeParticleWeights()
 {
     // TODO Normalize the particles
 
-    for(Particle p : particles_){
-        p.weight_ = 1.0 / num_particles_;
+    double weight_sum = 0.0;
+    for(Particle p: particles_){
+        weight_sum += p.weight_;
     }
+
+    for(Particle p : particles_){
+        double updated_weight = p.weight_/weight_sum;
+        p.updateWeight(updated_weight);
+    }
+
+
 }
 
 void LaserBasedLocalizationPf::resamplingParticles()
