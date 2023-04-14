@@ -79,7 +79,7 @@ rosserial_test_publish_subscribe_EXTERNAL_OBJECTS =
 
 /home/thomas/Documents/university/ar/catkin_ws/devel/lib/rosserial_test/rosserial_test_publish_subscribe: advanced_robotics_public/robot/sensors/stereo_camera_rig/rosserial/rosserial_test/CMakeFiles/rosserial_test_publish_subscribe.dir/src/publish_subscribe.cpp.o
 /home/thomas/Documents/university/ar/catkin_ws/devel/lib/rosserial_test/rosserial_test_publish_subscribe: advanced_robotics_public/robot/sensors/stereo_camera_rig/rosserial/rosserial_test/CMakeFiles/rosserial_test_publish_subscribe.dir/build.make
-/home/thomas/Documents/university/ar/catkin_ws/devel/lib/rosserial_test/rosserial_test_publish_subscribe: gtest/lib/libgtest.so
+/home/thomas/Documents/university/ar/catkin_ws/devel/lib/rosserial_test/rosserial_test_publish_subscribe: gtest/lib/libgtestd.so
 /home/thomas/Documents/university/ar/catkin_ws/devel/lib/rosserial_test/rosserial_test_publish_subscribe: /home/thomas/Documents/university/ar/catkin_ws/devel/lib/librosserial_server_lookup.so
 /home/thomas/Documents/university/ar/catkin_ws/devel/lib/rosserial_test/rosserial_test_publish_subscribe: /opt/ros/noetic/lib/libtopic_tools.so
 /home/thomas/Documents/university/ar/catkin_ws/devel/lib/rosserial_test/rosserial_test_publish_subscribe: /opt/ros/noetic/lib/libroscpp.so

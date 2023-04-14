@@ -109,7 +109,7 @@ time_test_EXTERNAL_OBJECTS =
 /home/thomas/Documents/university/ar/catkin_ws/devel/lib/rosserial_client/time_test: advanced_robotics_public/robot/sensors/stereo_camera_rig/rosserial/rosserial_client/CMakeFiles/time_test.dir/src/ros_lib/duration.cpp.o
 /home/thomas/Documents/university/ar/catkin_ws/devel/lib/rosserial_client/time_test: advanced_robotics_public/robot/sensors/stereo_camera_rig/rosserial/rosserial_client/CMakeFiles/time_test.dir/src/ros_lib/time.cpp.o
 /home/thomas/Documents/university/ar/catkin_ws/devel/lib/rosserial_client/time_test: advanced_robotics_public/robot/sensors/stereo_camera_rig/rosserial/rosserial_client/CMakeFiles/time_test.dir/build.make
-/home/thomas/Documents/university/ar/catkin_ws/devel/lib/rosserial_client/time_test: gtest/lib/libgtest.so
+/home/thomas/Documents/university/ar/catkin_ws/devel/lib/rosserial_client/time_test: gtest/lib/libgtestd.so
 /home/thomas/Documents/university/ar/catkin_ws/devel/lib/rosserial_client/time_test: advanced_robotics_public/robot/sensors/stereo_camera_rig/rosserial/rosserial_client/CMakeFiles/time_test.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/thomas/Documents/university/ar/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable /home/thomas/Documents/university/ar/catkin_ws/devel/lib/rosserial_client/time_test"
 	cd /home/thomas/Documents/university/ar/catkin_ws/build/advanced_robotics_public/robot/sensors/stereo_camera_rig/rosserial/rosserial_client && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/time_test.dir/link.txt --verbose=$(VERBOSE)

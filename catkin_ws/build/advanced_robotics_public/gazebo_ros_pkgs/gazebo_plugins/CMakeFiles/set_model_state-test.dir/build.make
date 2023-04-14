@@ -79,7 +79,7 @@ set_model_state__test_EXTERNAL_OBJECTS =
 
 /home/thomas/Documents/university/ar/catkin_ws/devel/lib/gazebo_plugins/set_model_state-test: advanced_robotics_public/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/set_model_state-test.dir/test/set_model_state_test/set_model_state_test.cpp.o
 /home/thomas/Documents/university/ar/catkin_ws/devel/lib/gazebo_plugins/set_model_state-test: advanced_robotics_public/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/set_model_state-test.dir/build.make
-/home/thomas/Documents/university/ar/catkin_ws/devel/lib/gazebo_plugins/set_model_state-test: gtest/lib/libgtest.so
+/home/thomas/Documents/university/ar/catkin_ws/devel/lib/gazebo_plugins/set_model_state-test: gtest/lib/libgtestd.so
 /home/thomas/Documents/university/ar/catkin_ws/devel/lib/gazebo_plugins/set_model_state-test: /usr/lib/x86_64-linux-gnu/libSimTKsimbody.so.3.6
 /home/thomas/Documents/university/ar/catkin_ws/devel/lib/gazebo_plugins/set_model_state-test: /usr/lib/x86_64-linux-gnu/libdart.so.6.9.2
 /home/thomas/Documents/university/ar/catkin_ws/devel/lib/gazebo_plugins/set_model_state-test: /usr/lib/x86_64-linux-gnu/libgazebo.so

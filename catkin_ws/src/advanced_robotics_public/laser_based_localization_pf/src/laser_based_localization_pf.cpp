@@ -1,6 +1,8 @@
 #include <laser_based_localization_pf/laser_based_localization_pf.h>
 #include <occupancy_grid_utils/ray_tracer.h>
 
+
+
 LaserBasedLocalizationPf::LaserBasedLocalizationPf(ros::NodeHandle n)
 {
     data_mutex_ = new boost::mutex();
@@ -35,6 +37,8 @@ void LaserBasedLocalizationPf::initParticles()
         ros::shutdown();
     }
     nav_msgs::OccupancyGrid map = srv.response.map;
+    
+
 
     //get max x and y values - use them to distribute your particles over the whole map
     max_y_position_ = static_cast<int>(map.info.height * map.info.resolution);
@@ -52,7 +56,7 @@ void LaserBasedLocalizationPf::initParticles()
         particles_.push_back(p);
     }
 
-    //std::cout<<(map.data.at(0)) << std::endl;
+    ROS_INFO("Data of occupancy grid map:%d ", map.data[0]);
 
 
 
@@ -64,7 +68,7 @@ void LaserBasedLocalizationPf::initParticles()
 
 
     //normalize weight of particles
-    //normalizeParticleWeights();
+    normalizeParticleWeights();
 }
 
 void LaserBasedLocalizationPf::updateOdometry(nav_msgs::Odometry odometry)

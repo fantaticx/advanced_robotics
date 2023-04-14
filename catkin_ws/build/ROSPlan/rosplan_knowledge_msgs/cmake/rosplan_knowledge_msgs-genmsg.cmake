@@ -24,22 +24,22 @@ add_custom_target(_rosplan_knowledge_msgs_generate_messages_check_deps_${_filena
 
 get_filename_component(_filename "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainOperator.msg" NAME_WE)
 add_custom_target(_rosplan_knowledge_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rosplan_knowledge_msgs" "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainOperator.msg" "rosplan_knowledge_msgs/DomainFormula:diagnostic_msgs/KeyValue:rosplan_knowledge_msgs/DomainInequality:rosplan_knowledge_msgs/ExprBase:rosplan_knowledge_msgs/ExprComposite:rosplan_knowledge_msgs/DomainAssignment:rosplan_knowledge_msgs/ProbabilisticEffect"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rosplan_knowledge_msgs" "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainOperator.msg" "rosplan_knowledge_msgs/ExprComposite:rosplan_knowledge_msgs/DomainInequality:rosplan_knowledge_msgs/ProbabilisticEffect:rosplan_knowledge_msgs/DomainFormula:rosplan_knowledge_msgs/DomainAssignment:diagnostic_msgs/KeyValue:rosplan_knowledge_msgs/ExprBase"
 )
 
 get_filename_component(_filename "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ProbabilisticEffect.msg" NAME_WE)
 add_custom_target(_rosplan_knowledge_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rosplan_knowledge_msgs" "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ProbabilisticEffect.msg" "rosplan_knowledge_msgs/DomainFormula:diagnostic_msgs/KeyValue:rosplan_knowledge_msgs/ExprBase:rosplan_knowledge_msgs/ExprComposite:rosplan_knowledge_msgs/DomainAssignment"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rosplan_knowledge_msgs" "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ProbabilisticEffect.msg" "rosplan_knowledge_msgs/ExprComposite:rosplan_knowledge_msgs/DomainFormula:rosplan_knowledge_msgs/DomainAssignment:diagnostic_msgs/KeyValue:rosplan_knowledge_msgs/ExprBase"
 )
 
 get_filename_component(_filename "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainAssignment.msg" NAME_WE)
 add_custom_target(_rosplan_knowledge_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rosplan_knowledge_msgs" "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainAssignment.msg" "rosplan_knowledge_msgs/DomainFormula:diagnostic_msgs/KeyValue:rosplan_knowledge_msgs/ExprBase:rosplan_knowledge_msgs/ExprComposite"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rosplan_knowledge_msgs" "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainAssignment.msg" "rosplan_knowledge_msgs/DomainFormula:rosplan_knowledge_msgs/ExprComposite:diagnostic_msgs/KeyValue:rosplan_knowledge_msgs/ExprBase"
 )
 
 get_filename_component(_filename "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainInequality.msg" NAME_WE)
 add_custom_target(_rosplan_knowledge_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rosplan_knowledge_msgs" "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainInequality.msg" "rosplan_knowledge_msgs/DomainFormula:diagnostic_msgs/KeyValue:rosplan_knowledge_msgs/ExprBase:rosplan_knowledge_msgs/ExprComposite"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rosplan_knowledge_msgs" "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainInequality.msg" "rosplan_knowledge_msgs/ExprComposite:diagnostic_msgs/KeyValue:rosplan_knowledge_msgs/DomainFormula:rosplan_knowledge_msgs/ExprBase"
 )
 
 get_filename_component(_filename "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprBase.msg" NAME_WE)
@@ -54,7 +54,7 @@ add_custom_target(_rosplan_knowledge_msgs_generate_messages_check_deps_${_filena
 
 get_filename_component(_filename "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/KnowledgeItem.msg" NAME_WE)
 add_custom_target(_rosplan_knowledge_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rosplan_knowledge_msgs" "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/KnowledgeItem.msg" "rosplan_knowledge_msgs/DomainFormula:diagnostic_msgs/KeyValue:rosplan_knowledge_msgs/DomainInequality:rosplan_knowledge_msgs/ExprBase:rosplan_knowledge_msgs/ExprComposite"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rosplan_knowledge_msgs" "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/KnowledgeItem.msg" "rosplan_knowledge_msgs/ExprComposite:rosplan_knowledge_msgs/DomainInequality:rosplan_knowledge_msgs/DomainFormula:diagnostic_msgs/KeyValue:rosplan_knowledge_msgs/ExprBase"
 )
 
 get_filename_component(_filename "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/StatusUpdate.msg" NAME_WE)
@@ -64,7 +64,7 @@ add_custom_target(_rosplan_knowledge_msgs_generate_messages_check_deps_${_filena
 
 get_filename_component(_filename "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/srv/GetAttributeService.srv" NAME_WE)
 add_custom_target(_rosplan_knowledge_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rosplan_knowledge_msgs" "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/srv/GetAttributeService.srv" "rosplan_knowledge_msgs/DomainFormula:diagnostic_msgs/KeyValue:rosplan_knowledge_msgs/DomainInequality:rosplan_knowledge_msgs/ExprBase:rosplan_knowledge_msgs/ExprComposite:rosplan_knowledge_msgs/KnowledgeItem"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rosplan_knowledge_msgs" "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/srv/GetAttributeService.srv" "rosplan_knowledge_msgs/KnowledgeItem:rosplan_knowledge_msgs/ExprComposite:rosplan_knowledge_msgs/DomainInequality:rosplan_knowledge_msgs/DomainFormula:diagnostic_msgs/KeyValue:rosplan_knowledge_msgs/ExprBase"
 )
 
 get_filename_component(_filename "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/srv/GetInstanceService.srv" NAME_WE)
@@ -74,22 +74,22 @@ add_custom_target(_rosplan_knowledge_msgs_generate_messages_check_deps_${_filena
 
 get_filename_component(_filename "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/srv/GetMetricService.srv" NAME_WE)
 add_custom_target(_rosplan_knowledge_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rosplan_knowledge_msgs" "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/srv/GetMetricService.srv" "rosplan_knowledge_msgs/DomainFormula:diagnostic_msgs/KeyValue:rosplan_knowledge_msgs/DomainInequality:rosplan_knowledge_msgs/ExprBase:rosplan_knowledge_msgs/ExprComposite:rosplan_knowledge_msgs/KnowledgeItem"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rosplan_knowledge_msgs" "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/srv/GetMetricService.srv" "rosplan_knowledge_msgs/KnowledgeItem:rosplan_knowledge_msgs/ExprComposite:rosplan_knowledge_msgs/DomainInequality:rosplan_knowledge_msgs/DomainFormula:diagnostic_msgs/KeyValue:rosplan_knowledge_msgs/ExprBase"
 )
 
 get_filename_component(_filename "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/srv/KnowledgeUpdateService.srv" NAME_WE)
 add_custom_target(_rosplan_knowledge_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rosplan_knowledge_msgs" "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/srv/KnowledgeUpdateService.srv" "rosplan_knowledge_msgs/DomainFormula:diagnostic_msgs/KeyValue:rosplan_knowledge_msgs/DomainInequality:rosplan_knowledge_msgs/ExprBase:rosplan_knowledge_msgs/ExprComposite:rosplan_knowledge_msgs/KnowledgeItem"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rosplan_knowledge_msgs" "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/srv/KnowledgeUpdateService.srv" "rosplan_knowledge_msgs/KnowledgeItem:rosplan_knowledge_msgs/ExprComposite:rosplan_knowledge_msgs/DomainInequality:rosplan_knowledge_msgs/DomainFormula:diagnostic_msgs/KeyValue:rosplan_knowledge_msgs/ExprBase"
 )
 
 get_filename_component(_filename "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/srv/KnowledgeUpdateServiceArray.srv" NAME_WE)
 add_custom_target(_rosplan_knowledge_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rosplan_knowledge_msgs" "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/srv/KnowledgeUpdateServiceArray.srv" "rosplan_knowledge_msgs/DomainFormula:diagnostic_msgs/KeyValue:rosplan_knowledge_msgs/DomainInequality:rosplan_knowledge_msgs/ExprBase:rosplan_knowledge_msgs/ExprComposite:rosplan_knowledge_msgs/KnowledgeItem"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rosplan_knowledge_msgs" "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/srv/KnowledgeUpdateServiceArray.srv" "rosplan_knowledge_msgs/KnowledgeItem:rosplan_knowledge_msgs/ExprComposite:rosplan_knowledge_msgs/DomainInequality:rosplan_knowledge_msgs/DomainFormula:diagnostic_msgs/KeyValue:rosplan_knowledge_msgs/ExprBase"
 )
 
 get_filename_component(_filename "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/srv/KnowledgeQueryService.srv" NAME_WE)
 add_custom_target(_rosplan_knowledge_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rosplan_knowledge_msgs" "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/srv/KnowledgeQueryService.srv" "rosplan_knowledge_msgs/DomainFormula:diagnostic_msgs/KeyValue:rosplan_knowledge_msgs/DomainInequality:rosplan_knowledge_msgs/ExprBase:rosplan_knowledge_msgs/ExprComposite:rosplan_knowledge_msgs/KnowledgeItem"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rosplan_knowledge_msgs" "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/srv/KnowledgeQueryService.srv" "rosplan_knowledge_msgs/KnowledgeItem:rosplan_knowledge_msgs/ExprComposite:rosplan_knowledge_msgs/DomainInequality:rosplan_knowledge_msgs/DomainFormula:diagnostic_msgs/KeyValue:rosplan_knowledge_msgs/ExprBase"
 )
 
 get_filename_component(_filename "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/srv/GetDomainNameService.srv" NAME_WE)
@@ -114,7 +114,7 @@ add_custom_target(_rosplan_knowledge_msgs_generate_messages_check_deps_${_filena
 
 get_filename_component(_filename "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/srv/GetDomainOperatorDetailsService.srv" NAME_WE)
 add_custom_target(_rosplan_knowledge_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rosplan_knowledge_msgs" "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/srv/GetDomainOperatorDetailsService.srv" "rosplan_knowledge_msgs/DomainFormula:diagnostic_msgs/KeyValue:rosplan_knowledge_msgs/DomainOperator:rosplan_knowledge_msgs/DomainInequality:rosplan_knowledge_msgs/ExprBase:rosplan_knowledge_msgs/ExprComposite:rosplan_knowledge_msgs/DomainAssignment:rosplan_knowledge_msgs/ProbabilisticEffect"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rosplan_knowledge_msgs" "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/srv/GetDomainOperatorDetailsService.srv" "rosplan_knowledge_msgs/DomainOperator:rosplan_knowledge_msgs/ExprComposite:rosplan_knowledge_msgs/DomainInequality:rosplan_knowledge_msgs/ProbabilisticEffect:rosplan_knowledge_msgs/DomainFormula:rosplan_knowledge_msgs/DomainAssignment:diagnostic_msgs/KeyValue:rosplan_knowledge_msgs/ExprBase"
 )
 
 get_filename_component(_filename "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/srv/GetDomainPredicateDetailsService.srv" NAME_WE)
@@ -182,25 +182,25 @@ _generate_msg_cpp(rosplan_knowledge_msgs
 _generate_msg_cpp(rosplan_knowledge_msgs
   "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainOperator.msg"
   "${MSG_I_FLAGS}"
-  "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainFormula.msg;/opt/ros/noetic/share/diagnostic_msgs/cmake/../msg/KeyValue.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainInequality.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprBase.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprComposite.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainAssignment.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ProbabilisticEffect.msg"
+  "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprComposite.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainInequality.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ProbabilisticEffect.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainFormula.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainAssignment.msg;/opt/ros/noetic/share/diagnostic_msgs/cmake/../msg/KeyValue.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprBase.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/rosplan_knowledge_msgs
 )
 _generate_msg_cpp(rosplan_knowledge_msgs
   "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ProbabilisticEffect.msg"
   "${MSG_I_FLAGS}"
-  "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainFormula.msg;/opt/ros/noetic/share/diagnostic_msgs/cmake/../msg/KeyValue.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprBase.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprComposite.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainAssignment.msg"
+  "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprComposite.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainFormula.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainAssignment.msg;/opt/ros/noetic/share/diagnostic_msgs/cmake/../msg/KeyValue.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprBase.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/rosplan_knowledge_msgs
 )
 _generate_msg_cpp(rosplan_knowledge_msgs
   "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainAssignment.msg"
   "${MSG_I_FLAGS}"
-  "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainFormula.msg;/opt/ros/noetic/share/diagnostic_msgs/cmake/../msg/KeyValue.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprBase.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprComposite.msg"
+  "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainFormula.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprComposite.msg;/opt/ros/noetic/share/diagnostic_msgs/cmake/../msg/KeyValue.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprBase.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/rosplan_knowledge_msgs
 )
 _generate_msg_cpp(rosplan_knowledge_msgs
   "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainInequality.msg"
   "${MSG_I_FLAGS}"
-  "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainFormula.msg;/opt/ros/noetic/share/diagnostic_msgs/cmake/../msg/KeyValue.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprBase.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprComposite.msg"
+  "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprComposite.msg;/opt/ros/noetic/share/diagnostic_msgs/cmake/../msg/KeyValue.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainFormula.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprBase.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/rosplan_knowledge_msgs
 )
 _generate_msg_cpp(rosplan_knowledge_msgs
@@ -218,7 +218,7 @@ _generate_msg_cpp(rosplan_knowledge_msgs
 _generate_msg_cpp(rosplan_knowledge_msgs
   "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/KnowledgeItem.msg"
   "${MSG_I_FLAGS}"
-  "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainFormula.msg;/opt/ros/noetic/share/diagnostic_msgs/cmake/../msg/KeyValue.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainInequality.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprBase.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprComposite.msg"
+  "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprComposite.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainInequality.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainFormula.msg;/opt/ros/noetic/share/diagnostic_msgs/cmake/../msg/KeyValue.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprBase.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/rosplan_knowledge_msgs
 )
 _generate_msg_cpp(rosplan_knowledge_msgs
@@ -232,7 +232,7 @@ _generate_msg_cpp(rosplan_knowledge_msgs
 _generate_srv_cpp(rosplan_knowledge_msgs
   "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/srv/GetAttributeService.srv"
   "${MSG_I_FLAGS}"
-  "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainFormula.msg;/opt/ros/noetic/share/diagnostic_msgs/cmake/../msg/KeyValue.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainInequality.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprBase.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprComposite.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/KnowledgeItem.msg"
+  "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/KnowledgeItem.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprComposite.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainInequality.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainFormula.msg;/opt/ros/noetic/share/diagnostic_msgs/cmake/../msg/KeyValue.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprBase.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/rosplan_knowledge_msgs
 )
 _generate_srv_cpp(rosplan_knowledge_msgs
@@ -244,25 +244,25 @@ _generate_srv_cpp(rosplan_knowledge_msgs
 _generate_srv_cpp(rosplan_knowledge_msgs
   "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/srv/GetMetricService.srv"
   "${MSG_I_FLAGS}"
-  "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainFormula.msg;/opt/ros/noetic/share/diagnostic_msgs/cmake/../msg/KeyValue.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainInequality.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprBase.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprComposite.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/KnowledgeItem.msg"
+  "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/KnowledgeItem.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprComposite.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainInequality.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainFormula.msg;/opt/ros/noetic/share/diagnostic_msgs/cmake/../msg/KeyValue.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprBase.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/rosplan_knowledge_msgs
 )
 _generate_srv_cpp(rosplan_knowledge_msgs
   "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/srv/KnowledgeUpdateService.srv"
   "${MSG_I_FLAGS}"
-  "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainFormula.msg;/opt/ros/noetic/share/diagnostic_msgs/cmake/../msg/KeyValue.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainInequality.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprBase.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprComposite.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/KnowledgeItem.msg"
+  "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/KnowledgeItem.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprComposite.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainInequality.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainFormula.msg;/opt/ros/noetic/share/diagnostic_msgs/cmake/../msg/KeyValue.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprBase.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/rosplan_knowledge_msgs
 )
 _generate_srv_cpp(rosplan_knowledge_msgs
   "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/srv/KnowledgeUpdateServiceArray.srv"
   "${MSG_I_FLAGS}"
-  "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainFormula.msg;/opt/ros/noetic/share/diagnostic_msgs/cmake/../msg/KeyValue.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainInequality.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprBase.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprComposite.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/KnowledgeItem.msg"
+  "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/KnowledgeItem.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprComposite.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainInequality.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainFormula.msg;/opt/ros/noetic/share/diagnostic_msgs/cmake/../msg/KeyValue.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprBase.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/rosplan_knowledge_msgs
 )
 _generate_srv_cpp(rosplan_knowledge_msgs
   "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/srv/KnowledgeQueryService.srv"
   "${MSG_I_FLAGS}"
-  "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainFormula.msg;/opt/ros/noetic/share/diagnostic_msgs/cmake/../msg/KeyValue.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainInequality.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprBase.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprComposite.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/KnowledgeItem.msg"
+  "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/KnowledgeItem.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprComposite.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainInequality.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainFormula.msg;/opt/ros/noetic/share/diagnostic_msgs/cmake/../msg/KeyValue.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprBase.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/rosplan_knowledge_msgs
 )
 _generate_srv_cpp(rosplan_knowledge_msgs
@@ -292,7 +292,7 @@ _generate_srv_cpp(rosplan_knowledge_msgs
 _generate_srv_cpp(rosplan_knowledge_msgs
   "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/srv/GetDomainOperatorDetailsService.srv"
   "${MSG_I_FLAGS}"
-  "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainFormula.msg;/opt/ros/noetic/share/diagnostic_msgs/cmake/../msg/KeyValue.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainOperator.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainInequality.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprBase.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprComposite.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainAssignment.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ProbabilisticEffect.msg"
+  "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainOperator.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprComposite.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainInequality.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ProbabilisticEffect.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainFormula.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainAssignment.msg;/opt/ros/noetic/share/diagnostic_msgs/cmake/../msg/KeyValue.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprBase.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/rosplan_knowledge_msgs
 )
 _generate_srv_cpp(rosplan_knowledge_msgs
@@ -447,25 +447,25 @@ _generate_msg_eus(rosplan_knowledge_msgs
 _generate_msg_eus(rosplan_knowledge_msgs
   "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainOperator.msg"
   "${MSG_I_FLAGS}"
-  "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainFormula.msg;/opt/ros/noetic/share/diagnostic_msgs/cmake/../msg/KeyValue.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainInequality.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprBase.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprComposite.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainAssignment.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ProbabilisticEffect.msg"
+  "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprComposite.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainInequality.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ProbabilisticEffect.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainFormula.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainAssignment.msg;/opt/ros/noetic/share/diagnostic_msgs/cmake/../msg/KeyValue.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprBase.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/rosplan_knowledge_msgs
 )
 _generate_msg_eus(rosplan_knowledge_msgs
   "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ProbabilisticEffect.msg"
   "${MSG_I_FLAGS}"
-  "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainFormula.msg;/opt/ros/noetic/share/diagnostic_msgs/cmake/../msg/KeyValue.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprBase.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprComposite.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainAssignment.msg"
+  "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprComposite.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainFormula.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainAssignment.msg;/opt/ros/noetic/share/diagnostic_msgs/cmake/../msg/KeyValue.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprBase.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/rosplan_knowledge_msgs
 )
 _generate_msg_eus(rosplan_knowledge_msgs
   "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainAssignment.msg"
   "${MSG_I_FLAGS}"
-  "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainFormula.msg;/opt/ros/noetic/share/diagnostic_msgs/cmake/../msg/KeyValue.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprBase.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprComposite.msg"
+  "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainFormula.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprComposite.msg;/opt/ros/noetic/share/diagnostic_msgs/cmake/../msg/KeyValue.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprBase.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/rosplan_knowledge_msgs
 )
 _generate_msg_eus(rosplan_knowledge_msgs
   "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainInequality.msg"
   "${MSG_I_FLAGS}"
-  "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainFormula.msg;/opt/ros/noetic/share/diagnostic_msgs/cmake/../msg/KeyValue.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprBase.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprComposite.msg"
+  "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprComposite.msg;/opt/ros/noetic/share/diagnostic_msgs/cmake/../msg/KeyValue.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainFormula.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprBase.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/rosplan_knowledge_msgs
 )
 _generate_msg_eus(rosplan_knowledge_msgs
@@ -483,7 +483,7 @@ _generate_msg_eus(rosplan_knowledge_msgs
 _generate_msg_eus(rosplan_knowledge_msgs
   "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/KnowledgeItem.msg"
   "${MSG_I_FLAGS}"
-  "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainFormula.msg;/opt/ros/noetic/share/diagnostic_msgs/cmake/../msg/KeyValue.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainInequality.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprBase.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprComposite.msg"
+  "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprComposite.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainInequality.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainFormula.msg;/opt/ros/noetic/share/diagnostic_msgs/cmake/../msg/KeyValue.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprBase.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/rosplan_knowledge_msgs
 )
 _generate_msg_eus(rosplan_knowledge_msgs
@@ -497,7 +497,7 @@ _generate_msg_eus(rosplan_knowledge_msgs
 _generate_srv_eus(rosplan_knowledge_msgs
   "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/srv/GetAttributeService.srv"
   "${MSG_I_FLAGS}"
-  "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainFormula.msg;/opt/ros/noetic/share/diagnostic_msgs/cmake/../msg/KeyValue.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainInequality.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprBase.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprComposite.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/KnowledgeItem.msg"
+  "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/KnowledgeItem.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprComposite.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainInequality.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainFormula.msg;/opt/ros/noetic/share/diagnostic_msgs/cmake/../msg/KeyValue.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprBase.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/rosplan_knowledge_msgs
 )
 _generate_srv_eus(rosplan_knowledge_msgs
@@ -509,25 +509,25 @@ _generate_srv_eus(rosplan_knowledge_msgs
 _generate_srv_eus(rosplan_knowledge_msgs
   "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/srv/GetMetricService.srv"
   "${MSG_I_FLAGS}"
-  "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainFormula.msg;/opt/ros/noetic/share/diagnostic_msgs/cmake/../msg/KeyValue.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainInequality.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprBase.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprComposite.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/KnowledgeItem.msg"
+  "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/KnowledgeItem.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprComposite.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainInequality.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainFormula.msg;/opt/ros/noetic/share/diagnostic_msgs/cmake/../msg/KeyValue.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprBase.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/rosplan_knowledge_msgs
 )
 _generate_srv_eus(rosplan_knowledge_msgs
   "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/srv/KnowledgeUpdateService.srv"
   "${MSG_I_FLAGS}"
-  "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainFormula.msg;/opt/ros/noetic/share/diagnostic_msgs/cmake/../msg/KeyValue.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainInequality.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprBase.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprComposite.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/KnowledgeItem.msg"
+  "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/KnowledgeItem.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprComposite.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainInequality.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainFormula.msg;/opt/ros/noetic/share/diagnostic_msgs/cmake/../msg/KeyValue.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprBase.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/rosplan_knowledge_msgs
 )
 _generate_srv_eus(rosplan_knowledge_msgs
   "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/srv/KnowledgeUpdateServiceArray.srv"
   "${MSG_I_FLAGS}"
-  "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainFormula.msg;/opt/ros/noetic/share/diagnostic_msgs/cmake/../msg/KeyValue.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainInequality.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprBase.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprComposite.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/KnowledgeItem.msg"
+  "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/KnowledgeItem.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprComposite.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainInequality.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainFormula.msg;/opt/ros/noetic/share/diagnostic_msgs/cmake/../msg/KeyValue.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprBase.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/rosplan_knowledge_msgs
 )
 _generate_srv_eus(rosplan_knowledge_msgs
   "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/srv/KnowledgeQueryService.srv"
   "${MSG_I_FLAGS}"
-  "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainFormula.msg;/opt/ros/noetic/share/diagnostic_msgs/cmake/../msg/KeyValue.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainInequality.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprBase.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprComposite.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/KnowledgeItem.msg"
+  "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/KnowledgeItem.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprComposite.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainInequality.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainFormula.msg;/opt/ros/noetic/share/diagnostic_msgs/cmake/../msg/KeyValue.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprBase.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/rosplan_knowledge_msgs
 )
 _generate_srv_eus(rosplan_knowledge_msgs
@@ -557,7 +557,7 @@ _generate_srv_eus(rosplan_knowledge_msgs
 _generate_srv_eus(rosplan_knowledge_msgs
   "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/srv/GetDomainOperatorDetailsService.srv"
   "${MSG_I_FLAGS}"
-  "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainFormula.msg;/opt/ros/noetic/share/diagnostic_msgs/cmake/../msg/KeyValue.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainOperator.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainInequality.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprBase.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprComposite.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainAssignment.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ProbabilisticEffect.msg"
+  "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainOperator.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprComposite.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainInequality.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ProbabilisticEffect.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainFormula.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainAssignment.msg;/opt/ros/noetic/share/diagnostic_msgs/cmake/../msg/KeyValue.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprBase.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/rosplan_knowledge_msgs
 )
 _generate_srv_eus(rosplan_knowledge_msgs
@@ -712,25 +712,25 @@ _generate_msg_lisp(rosplan_knowledge_msgs
 _generate_msg_lisp(rosplan_knowledge_msgs
   "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainOperator.msg"
   "${MSG_I_FLAGS}"
-  "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainFormula.msg;/opt/ros/noetic/share/diagnostic_msgs/cmake/../msg/KeyValue.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainInequality.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprBase.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprComposite.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainAssignment.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ProbabilisticEffect.msg"
+  "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprComposite.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainInequality.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ProbabilisticEffect.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainFormula.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainAssignment.msg;/opt/ros/noetic/share/diagnostic_msgs/cmake/../msg/KeyValue.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprBase.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/rosplan_knowledge_msgs
 )
 _generate_msg_lisp(rosplan_knowledge_msgs
   "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ProbabilisticEffect.msg"
   "${MSG_I_FLAGS}"
-  "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainFormula.msg;/opt/ros/noetic/share/diagnostic_msgs/cmake/../msg/KeyValue.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprBase.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprComposite.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainAssignment.msg"
+  "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprComposite.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainFormula.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainAssignment.msg;/opt/ros/noetic/share/diagnostic_msgs/cmake/../msg/KeyValue.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprBase.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/rosplan_knowledge_msgs
 )
 _generate_msg_lisp(rosplan_knowledge_msgs
   "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainAssignment.msg"
   "${MSG_I_FLAGS}"
-  "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainFormula.msg;/opt/ros/noetic/share/diagnostic_msgs/cmake/../msg/KeyValue.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprBase.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprComposite.msg"
+  "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainFormula.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprComposite.msg;/opt/ros/noetic/share/diagnostic_msgs/cmake/../msg/KeyValue.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprBase.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/rosplan_knowledge_msgs
 )
 _generate_msg_lisp(rosplan_knowledge_msgs
   "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainInequality.msg"
   "${MSG_I_FLAGS}"
-  "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainFormula.msg;/opt/ros/noetic/share/diagnostic_msgs/cmake/../msg/KeyValue.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprBase.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprComposite.msg"
+  "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprComposite.msg;/opt/ros/noetic/share/diagnostic_msgs/cmake/../msg/KeyValue.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainFormula.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprBase.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/rosplan_knowledge_msgs
 )
 _generate_msg_lisp(rosplan_knowledge_msgs
@@ -748,7 +748,7 @@ _generate_msg_lisp(rosplan_knowledge_msgs
 _generate_msg_lisp(rosplan_knowledge_msgs
   "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/KnowledgeItem.msg"
   "${MSG_I_FLAGS}"
-  "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainFormula.msg;/opt/ros/noetic/share/diagnostic_msgs/cmake/../msg/KeyValue.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainInequality.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprBase.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprComposite.msg"
+  "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprComposite.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainInequality.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainFormula.msg;/opt/ros/noetic/share/diagnostic_msgs/cmake/../msg/KeyValue.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprBase.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/rosplan_knowledge_msgs
 )
 _generate_msg_lisp(rosplan_knowledge_msgs
@@ -762,7 +762,7 @@ _generate_msg_lisp(rosplan_knowledge_msgs
 _generate_srv_lisp(rosplan_knowledge_msgs
   "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/srv/GetAttributeService.srv"
   "${MSG_I_FLAGS}"
-  "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainFormula.msg;/opt/ros/noetic/share/diagnostic_msgs/cmake/../msg/KeyValue.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainInequality.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprBase.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprComposite.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/KnowledgeItem.msg"
+  "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/KnowledgeItem.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprComposite.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainInequality.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainFormula.msg;/opt/ros/noetic/share/diagnostic_msgs/cmake/../msg/KeyValue.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprBase.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/rosplan_knowledge_msgs
 )
 _generate_srv_lisp(rosplan_knowledge_msgs
@@ -774,25 +774,25 @@ _generate_srv_lisp(rosplan_knowledge_msgs
 _generate_srv_lisp(rosplan_knowledge_msgs
   "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/srv/GetMetricService.srv"
   "${MSG_I_FLAGS}"
-  "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainFormula.msg;/opt/ros/noetic/share/diagnostic_msgs/cmake/../msg/KeyValue.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainInequality.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprBase.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprComposite.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/KnowledgeItem.msg"
+  "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/KnowledgeItem.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprComposite.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainInequality.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainFormula.msg;/opt/ros/noetic/share/diagnostic_msgs/cmake/../msg/KeyValue.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprBase.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/rosplan_knowledge_msgs
 )
 _generate_srv_lisp(rosplan_knowledge_msgs
   "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/srv/KnowledgeUpdateService.srv"
   "${MSG_I_FLAGS}"
-  "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainFormula.msg;/opt/ros/noetic/share/diagnostic_msgs/cmake/../msg/KeyValue.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainInequality.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprBase.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprComposite.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/KnowledgeItem.msg"
+  "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/KnowledgeItem.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprComposite.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainInequality.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainFormula.msg;/opt/ros/noetic/share/diagnostic_msgs/cmake/../msg/KeyValue.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprBase.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/rosplan_knowledge_msgs
 )
 _generate_srv_lisp(rosplan_knowledge_msgs
   "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/srv/KnowledgeUpdateServiceArray.srv"
   "${MSG_I_FLAGS}"
-  "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainFormula.msg;/opt/ros/noetic/share/diagnostic_msgs/cmake/../msg/KeyValue.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainInequality.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprBase.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprComposite.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/KnowledgeItem.msg"
+  "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/KnowledgeItem.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprComposite.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainInequality.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainFormula.msg;/opt/ros/noetic/share/diagnostic_msgs/cmake/../msg/KeyValue.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprBase.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/rosplan_knowledge_msgs
 )
 _generate_srv_lisp(rosplan_knowledge_msgs
   "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/srv/KnowledgeQueryService.srv"
   "${MSG_I_FLAGS}"
-  "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainFormula.msg;/opt/ros/noetic/share/diagnostic_msgs/cmake/../msg/KeyValue.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainInequality.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprBase.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprComposite.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/KnowledgeItem.msg"
+  "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/KnowledgeItem.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprComposite.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainInequality.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainFormula.msg;/opt/ros/noetic/share/diagnostic_msgs/cmake/../msg/KeyValue.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprBase.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/rosplan_knowledge_msgs
 )
 _generate_srv_lisp(rosplan_knowledge_msgs
@@ -822,7 +822,7 @@ _generate_srv_lisp(rosplan_knowledge_msgs
 _generate_srv_lisp(rosplan_knowledge_msgs
   "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/srv/GetDomainOperatorDetailsService.srv"
   "${MSG_I_FLAGS}"
-  "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainFormula.msg;/opt/ros/noetic/share/diagnostic_msgs/cmake/../msg/KeyValue.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainOperator.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainInequality.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprBase.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprComposite.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainAssignment.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ProbabilisticEffect.msg"
+  "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainOperator.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprComposite.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainInequality.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ProbabilisticEffect.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainFormula.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainAssignment.msg;/opt/ros/noetic/share/diagnostic_msgs/cmake/../msg/KeyValue.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprBase.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/rosplan_knowledge_msgs
 )
 _generate_srv_lisp(rosplan_knowledge_msgs
@@ -977,25 +977,25 @@ _generate_msg_nodejs(rosplan_knowledge_msgs
 _generate_msg_nodejs(rosplan_knowledge_msgs
   "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainOperator.msg"
   "${MSG_I_FLAGS}"
-  "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainFormula.msg;/opt/ros/noetic/share/diagnostic_msgs/cmake/../msg/KeyValue.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainInequality.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprBase.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprComposite.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainAssignment.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ProbabilisticEffect.msg"
+  "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprComposite.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainInequality.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ProbabilisticEffect.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainFormula.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainAssignment.msg;/opt/ros/noetic/share/diagnostic_msgs/cmake/../msg/KeyValue.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprBase.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/rosplan_knowledge_msgs
 )
 _generate_msg_nodejs(rosplan_knowledge_msgs
   "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ProbabilisticEffect.msg"
   "${MSG_I_FLAGS}"
-  "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainFormula.msg;/opt/ros/noetic/share/diagnostic_msgs/cmake/../msg/KeyValue.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprBase.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprComposite.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainAssignment.msg"
+  "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprComposite.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainFormula.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainAssignment.msg;/opt/ros/noetic/share/diagnostic_msgs/cmake/../msg/KeyValue.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprBase.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/rosplan_knowledge_msgs
 )
 _generate_msg_nodejs(rosplan_knowledge_msgs
   "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainAssignment.msg"
   "${MSG_I_FLAGS}"
-  "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainFormula.msg;/opt/ros/noetic/share/diagnostic_msgs/cmake/../msg/KeyValue.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprBase.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprComposite.msg"
+  "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainFormula.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprComposite.msg;/opt/ros/noetic/share/diagnostic_msgs/cmake/../msg/KeyValue.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprBase.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/rosplan_knowledge_msgs
 )
 _generate_msg_nodejs(rosplan_knowledge_msgs
   "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainInequality.msg"
   "${MSG_I_FLAGS}"
-  "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainFormula.msg;/opt/ros/noetic/share/diagnostic_msgs/cmake/../msg/KeyValue.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprBase.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprComposite.msg"
+  "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprComposite.msg;/opt/ros/noetic/share/diagnostic_msgs/cmake/../msg/KeyValue.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainFormula.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprBase.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/rosplan_knowledge_msgs
 )
 _generate_msg_nodejs(rosplan_knowledge_msgs
@@ -1013,7 +1013,7 @@ _generate_msg_nodejs(rosplan_knowledge_msgs
 _generate_msg_nodejs(rosplan_knowledge_msgs
   "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/KnowledgeItem.msg"
   "${MSG_I_FLAGS}"
-  "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainFormula.msg;/opt/ros/noetic/share/diagnostic_msgs/cmake/../msg/KeyValue.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainInequality.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprBase.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprComposite.msg"
+  "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprComposite.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainInequality.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainFormula.msg;/opt/ros/noetic/share/diagnostic_msgs/cmake/../msg/KeyValue.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprBase.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/rosplan_knowledge_msgs
 )
 _generate_msg_nodejs(rosplan_knowledge_msgs
@@ -1027,7 +1027,7 @@ _generate_msg_nodejs(rosplan_knowledge_msgs
 _generate_srv_nodejs(rosplan_knowledge_msgs
   "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/srv/GetAttributeService.srv"
   "${MSG_I_FLAGS}"
-  "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainFormula.msg;/opt/ros/noetic/share/diagnostic_msgs/cmake/../msg/KeyValue.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainInequality.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprBase.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprComposite.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/KnowledgeItem.msg"
+  "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/KnowledgeItem.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprComposite.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainInequality.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainFormula.msg;/opt/ros/noetic/share/diagnostic_msgs/cmake/../msg/KeyValue.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprBase.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/rosplan_knowledge_msgs
 )
 _generate_srv_nodejs(rosplan_knowledge_msgs
@@ -1039,25 +1039,25 @@ _generate_srv_nodejs(rosplan_knowledge_msgs
 _generate_srv_nodejs(rosplan_knowledge_msgs
   "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/srv/GetMetricService.srv"
   "${MSG_I_FLAGS}"
-  "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainFormula.msg;/opt/ros/noetic/share/diagnostic_msgs/cmake/../msg/KeyValue.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainInequality.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprBase.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprComposite.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/KnowledgeItem.msg"
+  "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/KnowledgeItem.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprComposite.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainInequality.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainFormula.msg;/opt/ros/noetic/share/diagnostic_msgs/cmake/../msg/KeyValue.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprBase.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/rosplan_knowledge_msgs
 )
 _generate_srv_nodejs(rosplan_knowledge_msgs
   "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/srv/KnowledgeUpdateService.srv"
   "${MSG_I_FLAGS}"
-  "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainFormula.msg;/opt/ros/noetic/share/diagnostic_msgs/cmake/../msg/KeyValue.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainInequality.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprBase.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprComposite.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/KnowledgeItem.msg"
+  "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/KnowledgeItem.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprComposite.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainInequality.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainFormula.msg;/opt/ros/noetic/share/diagnostic_msgs/cmake/../msg/KeyValue.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprBase.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/rosplan_knowledge_msgs
 )
 _generate_srv_nodejs(rosplan_knowledge_msgs
   "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/srv/KnowledgeUpdateServiceArray.srv"
   "${MSG_I_FLAGS}"
-  "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainFormula.msg;/opt/ros/noetic/share/diagnostic_msgs/cmake/../msg/KeyValue.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainInequality.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprBase.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprComposite.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/KnowledgeItem.msg"
+  "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/KnowledgeItem.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprComposite.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainInequality.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainFormula.msg;/opt/ros/noetic/share/diagnostic_msgs/cmake/../msg/KeyValue.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprBase.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/rosplan_knowledge_msgs
 )
 _generate_srv_nodejs(rosplan_knowledge_msgs
   "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/srv/KnowledgeQueryService.srv"
   "${MSG_I_FLAGS}"
-  "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainFormula.msg;/opt/ros/noetic/share/diagnostic_msgs/cmake/../msg/KeyValue.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainInequality.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprBase.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprComposite.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/KnowledgeItem.msg"
+  "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/KnowledgeItem.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprComposite.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainInequality.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainFormula.msg;/opt/ros/noetic/share/diagnostic_msgs/cmake/../msg/KeyValue.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprBase.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/rosplan_knowledge_msgs
 )
 _generate_srv_nodejs(rosplan_knowledge_msgs
@@ -1087,7 +1087,7 @@ _generate_srv_nodejs(rosplan_knowledge_msgs
 _generate_srv_nodejs(rosplan_knowledge_msgs
   "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/srv/GetDomainOperatorDetailsService.srv"
   "${MSG_I_FLAGS}"
-  "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainFormula.msg;/opt/ros/noetic/share/diagnostic_msgs/cmake/../msg/KeyValue.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainOperator.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainInequality.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprBase.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprComposite.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainAssignment.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ProbabilisticEffect.msg"
+  "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainOperator.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprComposite.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainInequality.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ProbabilisticEffect.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainFormula.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainAssignment.msg;/opt/ros/noetic/share/diagnostic_msgs/cmake/../msg/KeyValue.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprBase.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/rosplan_knowledge_msgs
 )
 _generate_srv_nodejs(rosplan_knowledge_msgs
@@ -1242,25 +1242,25 @@ _generate_msg_py(rosplan_knowledge_msgs
 _generate_msg_py(rosplan_knowledge_msgs
   "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainOperator.msg"
   "${MSG_I_FLAGS}"
-  "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainFormula.msg;/opt/ros/noetic/share/diagnostic_msgs/cmake/../msg/KeyValue.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainInequality.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprBase.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprComposite.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainAssignment.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ProbabilisticEffect.msg"
+  "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprComposite.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainInequality.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ProbabilisticEffect.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainFormula.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainAssignment.msg;/opt/ros/noetic/share/diagnostic_msgs/cmake/../msg/KeyValue.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprBase.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/rosplan_knowledge_msgs
 )
 _generate_msg_py(rosplan_knowledge_msgs
   "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ProbabilisticEffect.msg"
   "${MSG_I_FLAGS}"
-  "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainFormula.msg;/opt/ros/noetic/share/diagnostic_msgs/cmake/../msg/KeyValue.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprBase.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprComposite.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainAssignment.msg"
+  "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprComposite.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainFormula.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainAssignment.msg;/opt/ros/noetic/share/diagnostic_msgs/cmake/../msg/KeyValue.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprBase.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/rosplan_knowledge_msgs
 )
 _generate_msg_py(rosplan_knowledge_msgs
   "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainAssignment.msg"
   "${MSG_I_FLAGS}"
-  "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainFormula.msg;/opt/ros/noetic/share/diagnostic_msgs/cmake/../msg/KeyValue.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprBase.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprComposite.msg"
+  "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainFormula.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprComposite.msg;/opt/ros/noetic/share/diagnostic_msgs/cmake/../msg/KeyValue.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprBase.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/rosplan_knowledge_msgs
 )
 _generate_msg_py(rosplan_knowledge_msgs
   "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainInequality.msg"
   "${MSG_I_FLAGS}"
-  "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainFormula.msg;/opt/ros/noetic/share/diagnostic_msgs/cmake/../msg/KeyValue.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprBase.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprComposite.msg"
+  "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprComposite.msg;/opt/ros/noetic/share/diagnostic_msgs/cmake/../msg/KeyValue.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainFormula.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprBase.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/rosplan_knowledge_msgs
 )
 _generate_msg_py(rosplan_knowledge_msgs
@@ -1278,7 +1278,7 @@ _generate_msg_py(rosplan_knowledge_msgs
 _generate_msg_py(rosplan_knowledge_msgs
   "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/KnowledgeItem.msg"
   "${MSG_I_FLAGS}"
-  "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainFormula.msg;/opt/ros/noetic/share/diagnostic_msgs/cmake/../msg/KeyValue.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainInequality.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprBase.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprComposite.msg"
+  "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprComposite.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainInequality.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainFormula.msg;/opt/ros/noetic/share/diagnostic_msgs/cmake/../msg/KeyValue.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprBase.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/rosplan_knowledge_msgs
 )
 _generate_msg_py(rosplan_knowledge_msgs
@@ -1292,7 +1292,7 @@ _generate_msg_py(rosplan_knowledge_msgs
 _generate_srv_py(rosplan_knowledge_msgs
   "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/srv/GetAttributeService.srv"
   "${MSG_I_FLAGS}"
-  "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainFormula.msg;/opt/ros/noetic/share/diagnostic_msgs/cmake/../msg/KeyValue.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainInequality.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprBase.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprComposite.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/KnowledgeItem.msg"
+  "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/KnowledgeItem.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprComposite.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainInequality.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainFormula.msg;/opt/ros/noetic/share/diagnostic_msgs/cmake/../msg/KeyValue.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprBase.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/rosplan_knowledge_msgs
 )
 _generate_srv_py(rosplan_knowledge_msgs
@@ -1304,25 +1304,25 @@ _generate_srv_py(rosplan_knowledge_msgs
 _generate_srv_py(rosplan_knowledge_msgs
   "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/srv/GetMetricService.srv"
   "${MSG_I_FLAGS}"
-  "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainFormula.msg;/opt/ros/noetic/share/diagnostic_msgs/cmake/../msg/KeyValue.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainInequality.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprBase.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprComposite.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/KnowledgeItem.msg"
+  "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/KnowledgeItem.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprComposite.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainInequality.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainFormula.msg;/opt/ros/noetic/share/diagnostic_msgs/cmake/../msg/KeyValue.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprBase.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/rosplan_knowledge_msgs
 )
 _generate_srv_py(rosplan_knowledge_msgs
   "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/srv/KnowledgeUpdateService.srv"
   "${MSG_I_FLAGS}"
-  "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainFormula.msg;/opt/ros/noetic/share/diagnostic_msgs/cmake/../msg/KeyValue.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainInequality.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprBase.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprComposite.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/KnowledgeItem.msg"
+  "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/KnowledgeItem.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprComposite.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainInequality.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainFormula.msg;/opt/ros/noetic/share/diagnostic_msgs/cmake/../msg/KeyValue.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprBase.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/rosplan_knowledge_msgs
 )
 _generate_srv_py(rosplan_knowledge_msgs
   "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/srv/KnowledgeUpdateServiceArray.srv"
   "${MSG_I_FLAGS}"
-  "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainFormula.msg;/opt/ros/noetic/share/diagnostic_msgs/cmake/../msg/KeyValue.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainInequality.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprBase.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprComposite.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/KnowledgeItem.msg"
+  "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/KnowledgeItem.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprComposite.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainInequality.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainFormula.msg;/opt/ros/noetic/share/diagnostic_msgs/cmake/../msg/KeyValue.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprBase.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/rosplan_knowledge_msgs
 )
 _generate_srv_py(rosplan_knowledge_msgs
   "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/srv/KnowledgeQueryService.srv"
   "${MSG_I_FLAGS}"
-  "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainFormula.msg;/opt/ros/noetic/share/diagnostic_msgs/cmake/../msg/KeyValue.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainInequality.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprBase.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprComposite.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/KnowledgeItem.msg"
+  "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/KnowledgeItem.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprComposite.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainInequality.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainFormula.msg;/opt/ros/noetic/share/diagnostic_msgs/cmake/../msg/KeyValue.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprBase.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/rosplan_knowledge_msgs
 )
 _generate_srv_py(rosplan_knowledge_msgs
@@ -1352,7 +1352,7 @@ _generate_srv_py(rosplan_knowledge_msgs
 _generate_srv_py(rosplan_knowledge_msgs
   "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/srv/GetDomainOperatorDetailsService.srv"
   "${MSG_I_FLAGS}"
-  "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainFormula.msg;/opt/ros/noetic/share/diagnostic_msgs/cmake/../msg/KeyValue.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainOperator.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainInequality.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprBase.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprComposite.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainAssignment.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ProbabilisticEffect.msg"
+  "/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainOperator.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprComposite.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainInequality.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ProbabilisticEffect.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainFormula.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/DomainAssignment.msg;/opt/ros/noetic/share/diagnostic_msgs/cmake/../msg/KeyValue.msg;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_knowledge_msgs/msg/ExprBase.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/rosplan_knowledge_msgs
 )
 _generate_srv_py(rosplan_knowledge_msgs

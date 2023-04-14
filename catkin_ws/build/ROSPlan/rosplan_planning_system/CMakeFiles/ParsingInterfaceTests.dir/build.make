@@ -79,7 +79,7 @@ ParsingInterfaceTests_EXTERNAL_OBJECTS =
 
 /home/thomas/Documents/university/ar/catkin_ws/devel/lib/rosplan_planning_system/ParsingInterfaceTests: ROSPlan/rosplan_planning_system/CMakeFiles/ParsingInterfaceTests.dir/test/src/ParsingInterfaceTests.cpp.o
 /home/thomas/Documents/university/ar/catkin_ws/devel/lib/rosplan_planning_system/ParsingInterfaceTests: ROSPlan/rosplan_planning_system/CMakeFiles/ParsingInterfaceTests.dir/build.make
-/home/thomas/Documents/university/ar/catkin_ws/devel/lib/rosplan_planning_system/ParsingInterfaceTests: gtest/lib/libgtest.so
+/home/thomas/Documents/university/ar/catkin_ws/devel/lib/rosplan_planning_system/ParsingInterfaceTests: gtest/lib/libgtestd.so
 /home/thomas/Documents/university/ar/catkin_ws/devel/lib/rosplan_planning_system/ParsingInterfaceTests: /opt/ros/noetic/lib/libactionlib.so
 /home/thomas/Documents/university/ar/catkin_ws/devel/lib/rosplan_planning_system/ParsingInterfaceTests: /home/thomas/Documents/university/ar/catkin_ws/devel/lib/librddl_parser.so
 /home/thomas/Documents/university/ar/catkin_ws/devel/lib/rosplan_planning_system/ParsingInterfaceTests: /home/thomas/Documents/university/ar/catkin_ws/devel/lib/libippc_server.so

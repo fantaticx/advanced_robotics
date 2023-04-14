@@ -79,7 +79,7 @@ PlanDispatchTests_EXTERNAL_OBJECTS =
 
 /home/thomas/Documents/university/ar/catkin_ws/devel/lib/rosplan_planning_system/PlanDispatchTests: ROSPlan/rosplan_planning_system/CMakeFiles/PlanDispatchTests.dir/test/src/PlanDispatchTests.cpp.o
 /home/thomas/Documents/university/ar/catkin_ws/devel/lib/rosplan_planning_system/PlanDispatchTests: ROSPlan/rosplan_planning_system/CMakeFiles/PlanDispatchTests.dir/build.make
-/home/thomas/Documents/university/ar/catkin_ws/devel/lib/rosplan_planning_system/PlanDispatchTests: gtest/lib/libgtest.so
+/home/thomas/Documents/university/ar/catkin_ws/devel/lib/rosplan_planning_system/PlanDispatchTests: gtest/lib/libgtestd.so
 /home/thomas/Documents/university/ar/catkin_ws/devel/lib/rosplan_planning_system/PlanDispatchTests: /opt/ros/noetic/lib/libactionlib.so
 /home/thomas/Documents/university/ar/catkin_ws/devel/lib/rosplan_planning_system/PlanDispatchTests: /home/thomas/Documents/university/ar/catkin_ws/devel/lib/librddl_parser.so
 /home/thomas/Documents/university/ar/catkin_ws/devel/lib/rosplan_planning_system/PlanDispatchTests: /home/thomas/Documents/university/ar/catkin_ws/devel/lib/libippc_server.so

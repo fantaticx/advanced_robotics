@@ -79,7 +79,7 @@ KnowledgeBaseTests_EXTERNAL_OBJECTS =
 
 /home/thomas/Documents/university/ar/catkin_ws/devel/lib/rosplan_knowledge_base/KnowledgeBaseTests: ROSPlan/rosplan_knowledge_base/CMakeFiles/KnowledgeBaseTests.dir/test/src/KnowledgeBaseTests.cpp.o
 /home/thomas/Documents/university/ar/catkin_ws/devel/lib/rosplan_knowledge_base/KnowledgeBaseTests: ROSPlan/rosplan_knowledge_base/CMakeFiles/KnowledgeBaseTests.dir/build.make
-/home/thomas/Documents/university/ar/catkin_ws/devel/lib/rosplan_knowledge_base/KnowledgeBaseTests: gtest/lib/libgtest.so
+/home/thomas/Documents/university/ar/catkin_ws/devel/lib/rosplan_knowledge_base/KnowledgeBaseTests: gtest/lib/libgtestd.so
 /home/thomas/Documents/university/ar/catkin_ws/devel/lib/rosplan_knowledge_base/KnowledgeBaseTests: /opt/ros/noetic/lib/libtf.so
 /home/thomas/Documents/university/ar/catkin_ws/devel/lib/rosplan_knowledge_base/KnowledgeBaseTests: /opt/ros/noetic/lib/libtf2_ros.so
 /home/thomas/Documents/university/ar/catkin_ws/devel/lib/rosplan_knowledge_base/KnowledgeBaseTests: /opt/ros/noetic/lib/libactionlib.so

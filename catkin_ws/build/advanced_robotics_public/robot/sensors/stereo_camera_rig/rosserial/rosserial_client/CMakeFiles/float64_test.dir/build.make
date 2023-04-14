@@ -79,7 +79,7 @@ float64_test_EXTERNAL_OBJECTS =
 
 /home/thomas/Documents/university/ar/catkin_ws/devel/lib/rosserial_client/float64_test: advanced_robotics_public/robot/sensors/stereo_camera_rig/rosserial/rosserial_client/CMakeFiles/float64_test.dir/test/float64_test.cpp.o
 /home/thomas/Documents/university/ar/catkin_ws/devel/lib/rosserial_client/float64_test: advanced_robotics_public/robot/sensors/stereo_camera_rig/rosserial/rosserial_client/CMakeFiles/float64_test.dir/build.make
-/home/thomas/Documents/university/ar/catkin_ws/devel/lib/rosserial_client/float64_test: gtest/lib/libgtest.so
+/home/thomas/Documents/university/ar/catkin_ws/devel/lib/rosserial_client/float64_test: gtest/lib/libgtestd.so
 /home/thomas/Documents/university/ar/catkin_ws/devel/lib/rosserial_client/float64_test: advanced_robotics_public/robot/sensors/stereo_camera_rig/rosserial/rosserial_client/CMakeFiles/float64_test.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/thomas/Documents/university/ar/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable /home/thomas/Documents/university/ar/catkin_ws/devel/lib/rosserial_client/float64_test"
 	cd /home/thomas/Documents/university/ar/catkin_ws/build/advanced_robotics_public/robot/sensors/stereo_camera_rig/rosserial/rosserial_client && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/float64_test.dir/link.txt --verbose=$(VERBOSE)

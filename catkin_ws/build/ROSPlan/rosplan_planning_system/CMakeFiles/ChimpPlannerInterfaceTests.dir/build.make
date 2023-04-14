@@ -79,7 +79,7 @@ ChimpPlannerInterfaceTests_EXTERNAL_OBJECTS =
 
 /home/thomas/Documents/university/ar/catkin_ws/devel/lib/rosplan_planning_system/ChimpPlannerInterfaceTests: ROSPlan/rosplan_planning_system/CMakeFiles/ChimpPlannerInterfaceTests.dir/test/src/ChimpPlannerInterfaceTests.cpp.o
 /home/thomas/Documents/university/ar/catkin_ws/devel/lib/rosplan_planning_system/ChimpPlannerInterfaceTests: ROSPlan/rosplan_planning_system/CMakeFiles/ChimpPlannerInterfaceTests.dir/build.make
-/home/thomas/Documents/university/ar/catkin_ws/devel/lib/rosplan_planning_system/ChimpPlannerInterfaceTests: gtest/lib/libgtest.so
+/home/thomas/Documents/university/ar/catkin_ws/devel/lib/rosplan_planning_system/ChimpPlannerInterfaceTests: gtest/lib/libgtestd.so
 /home/thomas/Documents/university/ar/catkin_ws/devel/lib/rosplan_planning_system/ChimpPlannerInterfaceTests: /opt/ros/noetic/lib/libactionlib.so
 /home/thomas/Documents/university/ar/catkin_ws/devel/lib/rosplan_planning_system/ChimpPlannerInterfaceTests: /home/thomas/Documents/university/ar/catkin_ws/devel/lib/librddl_parser.so
 /home/thomas/Documents/university/ar/catkin_ws/devel/lib/rosplan_planning_system/ChimpPlannerInterfaceTests: /home/thomas/Documents/university/ar/catkin_ws/devel/lib/libippc_server.so
