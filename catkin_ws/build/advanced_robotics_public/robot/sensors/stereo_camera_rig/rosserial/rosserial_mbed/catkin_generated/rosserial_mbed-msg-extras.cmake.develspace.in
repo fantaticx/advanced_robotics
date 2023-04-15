@@ -1,2 +1,0 @@
-set(rosserial_mbed_MESSAGE_FILES "/home/thomas/Documents/university/ar/catkin_ws/src/advanced_robotics_public/robot/sensors/stereo_camera_rig/rosserial/rosserial_mbed/msg/Adc.msg")
-set(rosserial_mbed_SERVICE_FILES "/home/thomas/Documents/university/ar/catkin_ws/src/advanced_robotics_public/robot/sensors/stereo_camera_rig/rosserial/rosserial_mbed/srv/Test.srv;/home/thomas/Documents/university/ar/catkin_ws/src/advanced_robotics_public/robot/sensors/stereo_camera_rig/rosserial/rosserial_mbed/srv/SyncGen.srv")

@@ -1,8 +1,0 @@
-prefix=/home/thomas/Documents/university/ar/catkin_ws/install
-
-Name: g2o_based_mapping
-Description: Description of g2o_based_mapping
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

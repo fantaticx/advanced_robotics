@@ -1,2 +1,0 @@
-set(rosserial_msgs_MESSAGE_FILES "/home/thomas/Documents/university/ar/catkin_ws/src/advanced_robotics_public/robot/sensors/stereo_camera_rig/rosserial/rosserial_msgs/msg/Log.msg;/home/thomas/Documents/university/ar/catkin_ws/src/advanced_robotics_public/robot/sensors/stereo_camera_rig/rosserial/rosserial_msgs/msg/TopicInfo.msg")
-set(rosserial_msgs_SERVICE_FILES "/home/thomas/Documents/university/ar/catkin_ws/src/advanced_robotics_public/robot/sensors/stereo_camera_rig/rosserial/rosserial_msgs/srv/RequestParam.srv")
