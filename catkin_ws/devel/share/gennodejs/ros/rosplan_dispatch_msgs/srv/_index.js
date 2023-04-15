@@ -1,16 +1,16 @@
 
 "use strict";
 
-let PlanningService = require('./PlanningService.js')
+let ProblemService = require('./ProblemService.js')
 let GetPlanningParams = require('./GetPlanningParams.js')
 let ParsingService = require('./ParsingService.js')
-let ProblemService = require('./ProblemService.js')
 let DispatchService = require('./DispatchService.js')
+let PlanningService = require('./PlanningService.js')
 
 module.exports = {
-  PlanningService: PlanningService,
+  ProblemService: ProblemService,
   GetPlanningParams: GetPlanningParams,
   ParsingService: ParsingService,
-  ProblemService: ProblemService,
   DispatchService: DispatchService,
+  PlanningService: PlanningService,
 };

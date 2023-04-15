@@ -31,12 +31,12 @@
 // version 2.2 of Bison.
 
 /**
- ** \file /home/thomas/Documents/university/ar/catkin_ws/devel/include/hddl_parser/location.hh
+ ** \file /home/thomas/Documents/university/advanced_robotics/catkin_ws/devel/include/hddl_parser/location.hh
  ** Define the yy::location class.
  */
 
-#ifndef YY_YY_HOME_THOMAS_DOCUMENTS_UNIVERSITY_AR_CATKIN_WS_DEVEL_INCLUDE_HDDL_PARSER_LOCATION_HH_INCLUDED
-# define YY_YY_HOME_THOMAS_DOCUMENTS_UNIVERSITY_AR_CATKIN_WS_DEVEL_INCLUDE_HDDL_PARSER_LOCATION_HH_INCLUDED
+#ifndef YY_YY_HOME_THOMAS_DOCUMENTS_UNIVERSITY_ADVANCED_ROBOTICS_CATKIN_WS_DEVEL_INCLUDE_HDDL_PARSER_LOCATION_HH_INCLUDED
+# define YY_YY_HOME_THOMAS_DOCUMENTS_UNIVERSITY_ADVANCED_ROBOTICS_CATKIN_WS_DEVEL_INCLUDE_HDDL_PARSER_LOCATION_HH_INCLUDED
 
 # include <iostream>
 # include <string>
@@ -54,7 +54,7 @@
 # endif
 
 namespace yy {
-#line 58 "/home/thomas/Documents/university/ar/catkin_ws/devel/include/hddl_parser/location.hh"
+#line 58 "/home/thomas/Documents/university/advanced_robotics/catkin_ws/devel/include/hddl_parser/location.hh"
 
   /// A point in a source file.
   class position
@@ -327,6 +327,6 @@ namespace yy {
   }
 
 } // yy
-#line 331 "/home/thomas/Documents/university/ar/catkin_ws/devel/include/hddl_parser/location.hh"
+#line 331 "/home/thomas/Documents/university/advanced_robotics/catkin_ws/devel/include/hddl_parser/location.hh"
 
-#endif // !YY_YY_HOME_THOMAS_DOCUMENTS_UNIVERSITY_AR_CATKIN_WS_DEVEL_INCLUDE_HDDL_PARSER_LOCATION_HH_INCLUDED
+#endif // !YY_YY_HOME_THOMAS_DOCUMENTS_UNIVERSITY_ADVANCED_ROBOTICS_CATKIN_WS_DEVEL_INCLUDE_HDDL_PARSER_LOCATION_HH_INCLUDED

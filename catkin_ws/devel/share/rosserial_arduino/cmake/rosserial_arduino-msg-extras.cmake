@@ -1,2 +1,2 @@
-set(rosserial_arduino_MESSAGE_FILES "/home/thomas/Documents/university/ar/catkin_ws/src/advanced_robotics_public/robot/sensors/stereo_camera_rig/rosserial/rosserial_arduino/msg/Adc.msg")
-set(rosserial_arduino_SERVICE_FILES "/home/thomas/Documents/university/ar/catkin_ws/src/advanced_robotics_public/robot/sensors/stereo_camera_rig/rosserial/rosserial_arduino/srv/Test.srv")
+set(rosserial_arduino_MESSAGE_FILES "/home/thomas/Documents/university/advanced_robotics/catkin_ws/src/advanced_robotics_public/robot/sensors/stereo_camera_rig/rosserial/rosserial_arduino/msg/Adc.msg")
+set(rosserial_arduino_SERVICE_FILES "/home/thomas/Documents/university/advanced_robotics/catkin_ws/src/advanced_robotics_public/robot/sensors/stereo_camera_rig/rosserial/rosserial_arduino/srv/Test.srv")

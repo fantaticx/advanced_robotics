@@ -67,14 +67,14 @@ set(rosplan_dependencies_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("TRUE" STREQUAL "TRUE")
-  set(rosplan_dependencies_SOURCE_PREFIX /home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_dependencies)
-  set(rosplan_dependencies_DEVEL_PREFIX /home/thomas/Documents/university/ar/catkin_ws/devel)
+  set(rosplan_dependencies_SOURCE_PREFIX /home/thomas/Documents/university/advanced_robotics/catkin_ws/src/ROSPlan/rosplan_dependencies)
+  set(rosplan_dependencies_DEVEL_PREFIX /home/thomas/Documents/university/advanced_robotics/catkin_ws/devel)
   set(rosplan_dependencies_INSTALL_PREFIX "")
   set(rosplan_dependencies_PREFIX ${rosplan_dependencies_DEVEL_PREFIX})
 else()
   set(rosplan_dependencies_SOURCE_PREFIX "")
   set(rosplan_dependencies_DEVEL_PREFIX "")
-  set(rosplan_dependencies_INSTALL_PREFIX /home/thomas/Documents/university/ar/catkin_ws/install)
+  set(rosplan_dependencies_INSTALL_PREFIX /home/thomas/Documents/university/advanced_robotics/catkin_ws/install)
   set(rosplan_dependencies_PREFIX ${rosplan_dependencies_INSTALL_PREFIX})
 endif()
 
@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(rosplan_dependencies_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT "/home/thomas/Documents/university/ar/catkin_ws/devel/include;/opt/ros/noetic/include;/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp;/usr/include;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_dependencies/VAL/include;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_dependencies/rddl_parser;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_dependencies/ippc_server/include;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_dependencies/ippc_server/cpp-base64;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_dependencies/ppddl_parser/include;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_dependencies/ppddl_parser/src;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_dependencies/hddl_parser/include " STREQUAL " ")
+if(NOT "/home/thomas/Documents/university/advanced_robotics/catkin_ws/devel/include;/opt/ros/noetic/include;/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp;/usr/include;/home/thomas/Documents/university/advanced_robotics/catkin_ws/src/ROSPlan/rosplan_dependencies/VAL/include;/home/thomas/Documents/university/advanced_robotics/catkin_ws/src/ROSPlan/rosplan_dependencies/rddl_parser;/home/thomas/Documents/university/advanced_robotics/catkin_ws/src/ROSPlan/rosplan_dependencies/ippc_server/include;/home/thomas/Documents/university/advanced_robotics/catkin_ws/src/ROSPlan/rosplan_dependencies/ippc_server/cpp-base64;/home/thomas/Documents/university/advanced_robotics/catkin_ws/src/ROSPlan/rosplan_dependencies/ppddl_parser/include;/home/thomas/Documents/university/advanced_robotics/catkin_ws/src/ROSPlan/rosplan_dependencies/ppddl_parser/src;/home/thomas/Documents/university/advanced_robotics/catkin_ws/src/ROSPlan/rosplan_dependencies/hddl_parser/include " STREQUAL " ")
   set(rosplan_dependencies_INCLUDE_DIRS "")
-  set(_include_dirs "/home/thomas/Documents/university/ar/catkin_ws/devel/include;/opt/ros/noetic/include;/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp;/usr/include;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_dependencies/VAL/include;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_dependencies/rddl_parser;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_dependencies/ippc_server/include;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_dependencies/ippc_server/cpp-base64;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_dependencies/ppddl_parser/include;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_dependencies/ppddl_parser/src;/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_dependencies/hddl_parser/include")
+  set(_include_dirs "/home/thomas/Documents/university/advanced_robotics/catkin_ws/devel/include;/opt/ros/noetic/include;/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp;/usr/include;/home/thomas/Documents/university/advanced_robotics/catkin_ws/src/ROSPlan/rosplan_dependencies/VAL/include;/home/thomas/Documents/university/advanced_robotics/catkin_ws/src/ROSPlan/rosplan_dependencies/rddl_parser;/home/thomas/Documents/university/advanced_robotics/catkin_ws/src/ROSPlan/rosplan_dependencies/ippc_server/include;/home/thomas/Documents/university/advanced_robotics/catkin_ws/src/ROSPlan/rosplan_dependencies/ippc_server/cpp-base64;/home/thomas/Documents/university/advanced_robotics/catkin_ws/src/ROSPlan/rosplan_dependencies/ppddl_parser/include;/home/thomas/Documents/university/advanced_robotics/catkin_ws/src/ROSPlan/rosplan_dependencies/ppddl_parser/src;/home/thomas/Documents/university/advanced_robotics/catkin_ws/src/ROSPlan/rosplan_dependencies/hddl_parser/include")
   if(NOT " " STREQUAL " ")
     set(_report "Check the issue tracker '' and consider creating a ticket if the problem has not been reported yet.")
   elseif(NOT " " STREQUAL " ")
@@ -110,7 +110,7 @@ if(NOT "/home/thomas/Documents/university/ar/catkin_ws/devel/include;/opt/ros/no
         message(FATAL_ERROR "Project 'rosplan_dependencies' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  ${_report}")
       endif()
     else()
-      message(FATAL_ERROR "Project 'rosplan_dependencies' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/thomas/Documents/university/ar/catkin_ws/src/ROSPlan/rosplan_dependencies/${idir}'.  ${_report}")
+      message(FATAL_ERROR "Project 'rosplan_dependencies' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/thomas/Documents/university/advanced_robotics/catkin_ws/src/ROSPlan/rosplan_dependencies/${idir}'.  ${_report}")
     endif()
     _list_append_unique(rosplan_dependencies_INCLUDE_DIRS ${include})
   endforeach()
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/thomas/Documents/university/ar/catkin_ws/devel/lib;/home/thomas/Documents/university/ar/catkin_ws/devel/lib;/opt/ros/noetic/lib)
+    foreach(path /home/thomas/Documents/university/advanced_robotics/catkin_ws/devel/lib;/home/thomas/Documents/university/advanced_robotics/catkin_ws/devel/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

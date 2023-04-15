@@ -67,14 +67,14 @@ set(high_level_control_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("TRUE" STREQUAL "TRUE")
-  set(high_level_control_SOURCE_PREFIX /home/thomas/Documents/university/ar/catkin_ws/src/advanced_robotics_public/high_level_control)
-  set(high_level_control_DEVEL_PREFIX /home/thomas/Documents/university/ar/catkin_ws/devel)
+  set(high_level_control_SOURCE_PREFIX /home/thomas/Documents/university/advanced_robotics/catkin_ws/src/advanced_robotics_public/high_level_control)
+  set(high_level_control_DEVEL_PREFIX /home/thomas/Documents/university/advanced_robotics/catkin_ws/devel)
   set(high_level_control_INSTALL_PREFIX "")
   set(high_level_control_PREFIX ${high_level_control_DEVEL_PREFIX})
 else()
   set(high_level_control_SOURCE_PREFIX "")
   set(high_level_control_DEVEL_PREFIX "")
-  set(high_level_control_INSTALL_PREFIX /home/thomas/Documents/university/ar/catkin_ws/install)
+  set(high_level_control_INSTALL_PREFIX /home/thomas/Documents/university/advanced_robotics/catkin_ws/install)
   set(high_level_control_PREFIX ${high_level_control_INSTALL_PREFIX})
 endif()
 
@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(high_level_control_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT "/home/thomas/Documents/university/ar/catkin_ws/src/advanced_robotics_public/high_level_control/include " STREQUAL " ")
+if(NOT "/home/thomas/Documents/university/advanced_robotics/catkin_ws/src/advanced_robotics_public/high_level_control/include " STREQUAL " ")
   set(high_level_control_INCLUDE_DIRS "")
-  set(_include_dirs "/home/thomas/Documents/university/ar/catkin_ws/src/advanced_robotics_public/high_level_control/include")
+  set(_include_dirs "/home/thomas/Documents/university/advanced_robotics/catkin_ws/src/advanced_robotics_public/high_level_control/include")
   if(NOT " " STREQUAL " ")
     set(_report "Check the issue tracker '' and consider creating a ticket if the problem has not been reported yet.")
   elseif(NOT " " STREQUAL " ")
@@ -110,7 +110,7 @@ if(NOT "/home/thomas/Documents/university/ar/catkin_ws/src/advanced_robotics_pub
         message(FATAL_ERROR "Project 'high_level_control' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  ${_report}")
       endif()
     else()
-      message(FATAL_ERROR "Project 'high_level_control' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/thomas/Documents/university/ar/catkin_ws/src/advanced_robotics_public/high_level_control/${idir}'.  ${_report}")
+      message(FATAL_ERROR "Project 'high_level_control' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/thomas/Documents/university/advanced_robotics/catkin_ws/src/advanced_robotics_public/high_level_control/${idir}'.  ${_report}")
     endif()
     _list_append_unique(high_level_control_INCLUDE_DIRS ${include})
   endforeach()
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/thomas/Documents/university/ar/catkin_ws/devel/lib;/home/thomas/Documents/university/ar/catkin_ws/devel/lib;/opt/ros/noetic/lib)
+    foreach(path /home/thomas/Documents/university/advanced_robotics/catkin_ws/devel/lib;/home/thomas/Documents/university/advanced_robotics/catkin_ws/devel/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

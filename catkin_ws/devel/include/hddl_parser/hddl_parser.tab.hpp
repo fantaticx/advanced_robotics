@@ -32,7 +32,7 @@
 
 
 /**
- ** \file /home/thomas/Documents/university/ar/catkin_ws/devel/include/hddl_parser/hddl_parser.tab.hpp
+ ** \file /home/thomas/Documents/university/advanced_robotics/catkin_ws/devel/include/hddl_parser/hddl_parser.tab.hpp
  ** Define the yy::parser class.
  */
 
@@ -41,8 +41,8 @@
 // Undocumented macros, especially those whose name start with YY_,
 // are private implementation details.  Do not rely on them.
 
-#ifndef YY_YY_HOME_THOMAS_DOCUMENTS_UNIVERSITY_AR_CATKIN_WS_DEVEL_INCLUDE_HDDL_PARSER_HDDL_PARSER_TAB_HPP_INCLUDED
-# define YY_YY_HOME_THOMAS_DOCUMENTS_UNIVERSITY_AR_CATKIN_WS_DEVEL_INCLUDE_HDDL_PARSER_HDDL_PARSER_TAB_HPP_INCLUDED
+#ifndef YY_YY_HOME_THOMAS_DOCUMENTS_UNIVERSITY_ADVANCED_ROBOTICS_CATKIN_WS_DEVEL_INCLUDE_HDDL_PARSER_HDDL_PARSER_TAB_HPP_INCLUDED
+# define YY_YY_HOME_THOMAS_DOCUMENTS_UNIVERSITY_ADVANCED_ROBOTICS_CATKIN_WS_DEVEL_INCLUDE_HDDL_PARSER_HDDL_PARSER_TAB_HPP_INCLUDED
 // "%code requires" blocks.
 #line 13 "hddl_parser/src/hddl_parser.yacc"
 
@@ -50,7 +50,7 @@
 
     class HDDLParser;
 
-#line 54 "/home/thomas/Documents/university/ar/catkin_ws/devel/include/hddl_parser/hddl_parser.tab.hpp"
+#line 54 "/home/thomas/Documents/university/advanced_robotics/catkin_ws/devel/include/hddl_parser/hddl_parser.tab.hpp"
 
 
 # include <cstdlib> // std::abort
@@ -184,7 +184,7 @@
 #endif
 
 namespace yy {
-#line 188 "/home/thomas/Documents/university/ar/catkin_ws/devel/include/hddl_parser/hddl_parser.tab.hpp"
+#line 188 "/home/thomas/Documents/university/advanced_robotics/catkin_ws/devel/include/hddl_parser/hddl_parser.tab.hpp"
 
 
 
@@ -1755,10 +1755,10 @@ switch (yytype)
   }
 
 } // yy
-#line 1759 "/home/thomas/Documents/university/ar/catkin_ws/devel/include/hddl_parser/hddl_parser.tab.hpp"
+#line 1759 "/home/thomas/Documents/university/advanced_robotics/catkin_ws/devel/include/hddl_parser/hddl_parser.tab.hpp"
 
 
 
 
 
-#endif // !YY_YY_HOME_THOMAS_DOCUMENTS_UNIVERSITY_AR_CATKIN_WS_DEVEL_INCLUDE_HDDL_PARSER_HDDL_PARSER_TAB_HPP_INCLUDED
+#endif // !YY_YY_HOME_THOMAS_DOCUMENTS_UNIVERSITY_ADVANCED_ROBOTICS_CATKIN_WS_DEVEL_INCLUDE_HDDL_PARSER_HDDL_PARSER_TAB_HPP_INCLUDED

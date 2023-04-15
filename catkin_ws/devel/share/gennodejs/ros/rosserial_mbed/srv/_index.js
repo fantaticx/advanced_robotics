@@ -1,10 +1,10 @@
 
 "use strict";
 
-let SyncGen = require('./SyncGen.js')
 let Test = require('./Test.js')
+let SyncGen = require('./SyncGen.js')
 
 module.exports = {
-  SyncGen: SyncGen,
   Test: Test,
+  SyncGen: SyncGen,
 };

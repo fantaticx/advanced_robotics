@@ -1,46 +1,46 @@
 
 "use strict";
 
-let EsterelPlanNode = require('./EsterelPlanNode.js');
-let EsterelPlan = require('./EsterelPlan.js');
-let ActionDispatch = require('./ActionDispatch.js');
-let CompletePlan = require('./CompletePlan.js');
 let ActionFeedback = require('./ActionFeedback.js');
 let EsterelPlanEdge = require('./EsterelPlanEdge.js');
-let NonBlockingDispatchResult = require('./NonBlockingDispatchResult.js');
+let CompletePlan = require('./CompletePlan.js');
+let EsterelPlan = require('./EsterelPlan.js');
+let ActionDispatch = require('./ActionDispatch.js');
+let EsterelPlanNode = require('./EsterelPlanNode.js');
 let NonBlockingDispatchActionGoal = require('./NonBlockingDispatchActionGoal.js');
+let PlanGoal = require('./PlanGoal.js');
 let PlanResult = require('./PlanResult.js');
 let PlanActionGoal = require('./PlanActionGoal.js');
-let PlanGoal = require('./PlanGoal.js');
+let PlanAction = require('./PlanAction.js');
+let NonBlockingDispatchActionResult = require('./NonBlockingDispatchActionResult.js');
+let NonBlockingDispatchActionFeedback = require('./NonBlockingDispatchActionFeedback.js');
+let PlanActionFeedback = require('./PlanActionFeedback.js');
+let PlanActionResult = require('./PlanActionResult.js');
 let PlanFeedback = require('./PlanFeedback.js');
 let NonBlockingDispatchAction = require('./NonBlockingDispatchAction.js');
-let PlanActionResult = require('./PlanActionResult.js');
-let NonBlockingDispatchActionFeedback = require('./NonBlockingDispatchActionFeedback.js');
-let NonBlockingDispatchActionResult = require('./NonBlockingDispatchActionResult.js');
 let NonBlockingDispatchFeedback = require('./NonBlockingDispatchFeedback.js');
-let PlanAction = require('./PlanAction.js');
-let PlanActionFeedback = require('./PlanActionFeedback.js');
+let NonBlockingDispatchResult = require('./NonBlockingDispatchResult.js');
 let NonBlockingDispatchGoal = require('./NonBlockingDispatchGoal.js');
 
 module.exports = {
-  EsterelPlanNode: EsterelPlanNode,
-  EsterelPlan: EsterelPlan,
-  ActionDispatch: ActionDispatch,
-  CompletePlan: CompletePlan,
   ActionFeedback: ActionFeedback,
   EsterelPlanEdge: EsterelPlanEdge,
-  NonBlockingDispatchResult: NonBlockingDispatchResult,
+  CompletePlan: CompletePlan,
+  EsterelPlan: EsterelPlan,
+  ActionDispatch: ActionDispatch,
+  EsterelPlanNode: EsterelPlanNode,
   NonBlockingDispatchActionGoal: NonBlockingDispatchActionGoal,
+  PlanGoal: PlanGoal,
   PlanResult: PlanResult,
   PlanActionGoal: PlanActionGoal,
-  PlanGoal: PlanGoal,
+  PlanAction: PlanAction,
+  NonBlockingDispatchActionResult: NonBlockingDispatchActionResult,
+  NonBlockingDispatchActionFeedback: NonBlockingDispatchActionFeedback,
+  PlanActionFeedback: PlanActionFeedback,
+  PlanActionResult: PlanActionResult,
   PlanFeedback: PlanFeedback,
   NonBlockingDispatchAction: NonBlockingDispatchAction,
-  PlanActionResult: PlanActionResult,
-  NonBlockingDispatchActionFeedback: NonBlockingDispatchActionFeedback,
-  NonBlockingDispatchActionResult: NonBlockingDispatchActionResult,
   NonBlockingDispatchFeedback: NonBlockingDispatchFeedback,
-  PlanAction: PlanAction,
-  PlanActionFeedback: PlanActionFeedback,
+  NonBlockingDispatchResult: NonBlockingDispatchResult,
   NonBlockingDispatchGoal: NonBlockingDispatchGoal,
 };
