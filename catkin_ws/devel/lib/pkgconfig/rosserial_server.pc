@@ -1,8 +1,8 @@
-prefix=/home/thomas/Documents/university/ar/catkin_ws/devel
+prefix=/home/thomas/Documents/university/advanced_robotics/catkin_ws/devel
 
 Name: rosserial_server
 Description: Description of rosserial_server
 Version: 0.8.0
-Cflags: -I/home/thomas/Documents/university/ar/catkin_ws/src/advanced_robotics_public/robot/sensors/stereo_camera_rig/rosserial/rosserial_server/include
+Cflags: -I/home/thomas/Documents/university/advanced_robotics/catkin_ws/src/advanced_robotics_public/robot/sensors/stereo_camera_rig/rosserial/rosserial_server/include
 Libs: -L${prefix}/lib -lrosserial_server_lookup
 Requires: roscpp rosserial_msgs std_msgs topic_tools

@@ -1,4 +1,4 @@
-prefix=/home/thomas/Documents/university/ar/catkin_ws/devel
+prefix=/home/thomas/Documents/university/advanced_robotics/catkin_ws/devel
 
 Name: lpn_global_path_planner
 Description: Description of lpn_global_path_planner

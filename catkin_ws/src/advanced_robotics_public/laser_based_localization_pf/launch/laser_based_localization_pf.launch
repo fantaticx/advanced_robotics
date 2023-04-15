@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+
+<node name="laser_localization" pkg="laser_based_localization_pf" type="laser_based_localization_pf"/>
+
+</launch>

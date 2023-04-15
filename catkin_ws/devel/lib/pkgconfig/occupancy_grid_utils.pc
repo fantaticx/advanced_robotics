@@ -1,8 +1,8 @@
-prefix=/home/thomas/Documents/university/ar/catkin_ws/devel
+prefix=/home/thomas/Documents/university/advanced_robotics/catkin_ws/devel
 
 Name: occupancy_grid_utils
 Description: Description of occupancy_grid_utils
 Version: 0.0.10
-Cflags: -I/home/thomas/Documents/university/ar/catkin_ws/devel/include -I/home/thomas/Documents/university/ar/catkin_ws/src/advanced_robotics_public/occupancy_grid_utils/include
+Cflags: -I/home/thomas/Documents/university/advanced_robotics/catkin_ws/devel/include -I/home/thomas/Documents/university/advanced_robotics/catkin_ws/src/advanced_robotics_public/occupancy_grid_utils/include
 Libs: -L${prefix}/lib -lgrid_utils
 Requires: nav_msgs geometry_msgs sensor_msgs laser_geometry roscpp rospy tf tf2_bullet message_runtime

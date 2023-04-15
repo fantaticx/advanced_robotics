@@ -6,7 +6,7 @@ from os import path as os_path
 from pkgutil import extend_path
 from sys import path as sys_path
 
-__extended_path = '/home/thomas/Documents/university/ar/catkin_ws/src/advanced_robotics_public/gazebo_ros_pkgs/gazebo_plugins/src'.split(';')
+__extended_path = '/home/thomas/Documents/university/advanced_robotics/catkin_ws/src/advanced_robotics_public/gazebo_ros_pkgs/gazebo_plugins/src'.split(';')
 for p in reversed(__extended_path):
     sys_path.insert(0, p)
     del p

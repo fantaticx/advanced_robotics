@@ -1,4 +1,4 @@
-prefix=/home/thomas/Documents/university/ar/catkin_ws/devel
+prefix=/home/thomas/Documents/university/advanced_robotics/catkin_ws/devel
 
 Name: stereo_camera_description
 Description: Description of stereo_camera_description
