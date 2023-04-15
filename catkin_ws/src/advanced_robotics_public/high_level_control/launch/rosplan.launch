@@ -1,0 +1,71 @@
+
+<launch>
+  
+  	<!-- arguments -->
+	<arg name="domain_path"	default="$(find high_level_control)/pddl/domain.pddl" />
+	<arg name="problem_path"	default="$(find high_level_control)/pddl/problem.pddl" />
+
+  <!-- Move Base -->
+  <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
+    <rosparam file="$(find high_level_control)/config/costmap.yaml" command="load" ns="global_costmap" />
+    <rosparam file="$(find high_level_control)/config/costmap.yaml" command="load" ns="local_costmap" />
+    <rosparam file="$(find high_level_control)/config/global_planner_params.yaml" command="load"/>
+
+    <param name="local_costmap/rolling_window" value="true"/>
+    <param name="local_costmap/width" value="10.0"/>
+    <param name="local_costmap/height" value="10.0"/>
+
+    <param name="controller_frequency" value="5"/>
+    <param name="planner_frequency" value="2"/>
+    
+  </node>
+
+	<!-- Load predicate mapping parameters-->
+	<rosparam file="$(find high_level_control)/config/predicate_mapping.yaml" command="load"/>
+
+  <!-- Opening/Closing AS -->
+  <node pkg="robot_door_closing" type="robot_door_closing_server_node" respawn="false" name="close_server" output="screen"/>
+  <node pkg="robot_door_opening" type="robot_door_opening_server_node" respawn="false" name="open_server" output="screen"/>
+
+	<!-- ROSPlan -->
+	<include file="$(find rosplan_planning_system)/launch/interfaced_planning_system.launch" >
+		<arg name="domain_path"		value="$(arg domain_path)" />
+		<arg name="problem_path"	value="$(arg problem_path)" />
+		<arg name="autom_gen_problem_path"	value="$(find high_level_control)/pddl/gen_problem.pddl" />
+		<arg name="data_path"	value="$(find high_level_control)/pddl/" />
+		<arg name="use_problem_topic"	value="false" />
+	</include>
+
+	<!-- sim actions 
+	<include file="$(find rosplan_planning_system)/launch/includes/simulated_action.launch" >
+		<arg name="pddl_action_name" value="grab" />
+	</include>
+	<include file="$(find rosplan_planning_system)/launch/includes/simulated_action.launch" >
+		<arg name="pddl_action_name" value="recharge" />
+	</include>-->
+
+  <!-- move action interface -->
+	<node name="rosplan_interface_move" pkg="high_level_control" type="move_action_interface" respawn="false" output="screen">
+		<param name="knowledge_base"		value="rosplan_knowledge_base" />
+		<param name="pddl_action_name"		value="move" />
+		<param name="action_dispatch_topic" value="/rosplan_plan_dispatcher/action_dispatch" />
+		<param name="action_feedback_topic" value="/rosplan_plan_dispatcher/action_feedback" />
+	</node>
+
+  <!-- open action interface -->
+	<node name="rosplan_interface_open" pkg="high_level_control" type="open_action_interface" respawn="false" output="screen">
+		<param name="knowledge_base"		value="rosplan_knowledge_base" />
+		<param name="pddl_action_name"		value="open-door" />
+		<param name="action_dispatch_topic" value="/rosplan_plan_dispatcher/action_dispatch" />
+		<param name="action_feedback_topic" value="/rosplan_plan_dispatcher/action_feedback" />
+	</node>
+
+    <!-- close action interface -->
+	<node name="rosplan_interface_close" pkg="high_level_control" type="close_action_interface" respawn="false" output="screen">
+		<param name="knowledge_base"		value="rosplan_knowledge_base" />
+		<param name="pddl_action_name"		value="close-door" />
+		<param name="action_dispatch_topic" value="/rosplan_plan_dispatcher/action_dispatch" />
+		<param name="action_feedback_topic" value="/rosplan_plan_dispatcher/action_feedback" />
+	</node>
+
+</launch>

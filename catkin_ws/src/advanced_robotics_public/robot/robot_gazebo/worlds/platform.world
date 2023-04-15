@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+<sdf version="1.4">
+  <world name="platform">
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+
+    <include>
+      <uri>model://sun</uri>
+    </include>
+
+    <include>
+      <uri>model://winding_valley_heightmap</uri>
+    </include>
+
+
+    <include>
+      <uri>model://robotics-platform</uri>
+      <name>robot_platform</name>
+      <pose>100.0 -10 5.0 0 0 0</pose>
+    </include>
+
+  </world>
+</sdf>

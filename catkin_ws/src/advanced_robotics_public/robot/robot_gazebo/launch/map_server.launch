@@ -1,0 +1,6 @@
+<launch>
+  <node pkg="map_server" type="map_server" respawn="false" name="map_server" output="log" args="$(find robot_gazebo)/maps/building_map.yaml">
+  </node>
+  
+  <!-- <node pkg="tf" type="static_transform_publisher" name="map_odom_broadcaster" args="0 0 0 0 0 0 1 map odom 100" /> -->
+</launch>

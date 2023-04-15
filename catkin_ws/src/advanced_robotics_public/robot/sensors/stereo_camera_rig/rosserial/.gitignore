@@ -1,0 +1,12 @@
+*.pyc
+*.swp
+rosserial_server/doc/
+*.out
+*.geany
+*.o
+*.d
+*.disasm
+*.elf
+*.hex
+*.ld
+*.map

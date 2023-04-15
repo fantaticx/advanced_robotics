@@ -1,0 +1,139 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro" name="robot_platform_laser">
+
+  <xacro:property name="M_PI"     value="3.1415926535897931" />
+
+  <!-- laser Link is the standard mounting position for the UM6 laser.-->
+  <!-- Can be modified with environment variables in /etc/ros/setup.bash -->
+  <xacro:macro name="mrs1000" params="prefix parent_link gpu:=false *joint_pose">
+    <link name="${prefix}laser_link"/>
+
+    <joint name="${prefix}laser_base_joint" type="fixed">
+        <xacro:insert_block name="joint_pose"/>
+        <parent link="${parent_link}" />
+        <child link="${prefix}laser_base_link" />
+    </joint>
+
+    <joint name="${prefix}laser_joint" type="fixed">
+        <origin rpy="0  0  0" xyz="0  0  0.0438"/>
+        <parent link="${prefix}laser_base_link" />
+        <child link="${prefix}laser_link" />
+    </joint>
+
+    <link name="${prefix}laser_base_link">
+      <inertial>
+        <mass value="0.347269117465613"/>
+        <origin rpy="0  0  0" xyz="0  0  0"/>
+        <inertia ixx="0.04418104883831868" ixy="4.71524518392147e-05" ixz="0.00031086934220585065" iyy="0.044004379397396945" iyz="-4.239621148180231e-06" izz="0.029740675109622146"/>
+      </inertial>
+      <collision name="${prefix}laser_base_link_collision">
+        <origin rpy="0 0 0" xyz="0 0 0.04341675375349484"/>
+        <geometry>
+          <mesh filename="package://sick_laser_description/meshes/mrs1000.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+      </collision>
+      <visual name="${prefix}laser_base_link_visual">
+        <origin rpy="0 0 0" xyz="0 0 0.04341675375349484"/>
+        <geometry>
+          <mesh filename="package://sick_laser_description/meshes/mrs1000.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="green"/>
+      </visual>
+    </link>
+
+    <gazebo reference="${prefix}laser_base_link">
+      <mu1 value="1.0"/>
+      <mu2 value="1.0"/>
+      <kp value="10000000.0" />
+      <kd value="1.0" />
+      <fdir1 value="1 0 0"/>
+      <material>Gazebo/Green</material>
+    </gazebo>
+      
+    <!-- Gazebo requires the velodyne_gazebo_plugins package -->
+    <gazebo reference="${prefix}laser_link">
+      <xacro:if value="${gpu}">
+        <sensor type="gpu_ray" name="${prefix}mrs1000">
+          <pose>0 0 0 0 0 0</pose>
+          <visualize>false</visualize>
+          <update_rate>12.5</update_rate>
+          <ray>
+            <scan>
+              <horizontal>
+                <samples>1100</samples>
+                <resolution>1</resolution>
+                <min_angle>-${3*M_PI/4}</min_angle>
+                <max_angle>${3*M_PI/4}</max_angle>
+              </horizontal>
+              <vertical>
+                <samples>4</samples>
+                <resolution>1</resolution>
+                <min_angle>-${2.5*M_PI/180.0}</min_angle>
+                <max_angle> ${5.0*M_PI/180.0}</max_angle>
+              </vertical>
+            </scan>
+            <range>
+              <min>0.2</min>
+              <max>64.0</max>
+              <resolution>0.001</resolution>
+            </range>
+            <noise>
+              <type>gaussian</type>
+              <mean>0.0</mean>
+              <stddev>0.0</stddev>
+            </noise>
+          </ray>
+          <plugin name="gazebo_ros_laser_controller" filename="libgazebo_ros_velodyne_gpu_laser.so">
+            <topicName>/${prefix}laser/pointcloud</topicName>
+            <frameName>/${prefix}laser_link</frameName>
+            <min_range>0.2</min_range>
+            <max_range>64.0</max_range>
+            <gaussianNoise>0.008</gaussianNoise>
+          </plugin>
+        </sensor>
+      </xacro:if>
+      <xacro:unless value="${gpu}">
+        <sensor type="ray" name="${prefix}mrs1000">
+          <pose>0 0 0 0 0 0</pose>
+          <visualize>false</visualize>
+          <update_rate>12.5</update_rate>
+          <ray>
+            <scan>
+              <horizontal>
+                <samples>1100</samples>
+                <resolution>1</resolution>
+                <min_angle>-${3*M_PI/4}</min_angle>
+                <max_angle>${3*M_PI/4}</max_angle>
+              </horizontal>
+              <vertical>
+                <samples>4</samples>
+                <resolution>1</resolution>
+                <min_angle>-${2.5*M_PI/180.0}</min_angle>
+                <max_angle> ${5.0*M_PI/180.0}</max_angle>
+              </vertical>
+            </scan>
+            <range>
+              <min>0.2</min>
+              <max>64.0</max>
+              <resolution>0.001</resolution>
+            </range>
+            <noise>
+              <type>gaussian</type>
+              <mean>0.0</mean>
+              <stddev>0.0</stddev>
+            </noise>
+          </ray>
+          <plugin name="gazebo_ros_laser_controller" filename="libgazebo_ros_velodyne_laser.so">
+            <topicName>/${prefix}laser/pointcloud</topicName>
+            <frameName>/${prefix}laser_link</frameName>
+            <min_range>0.2</min_range>
+            <max_range>64.0</max_range>
+            <gaussianNoise>0.008</gaussianNoise>
+          </plugin>
+        </sensor>
+      </xacro:unless>
+    </gazebo>
+
+  </xacro:macro>
+
+</robot>

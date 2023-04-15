@@ -1,0 +1,218 @@
+<?xml version="1.0"?>
+
+<!--
+Copyright (c) 2020, STEREOLABS.
+
+All rights reserved.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+"AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<robot name="zed_camera" xmlns:xacro="http://ros.org/wiki/xacro">
+
+<!-- Includes -->
+    <xacro:include filename="$(find zed_camera_description)/urdf/materials.urdf.xacro" />
+
+    <!-- Properties -->
+    <xacro:property name="M_PI"     value="3.1415926535897931" />
+
+    <xacro:macro name="zed_camera" params="camera_name:=zed camera_model:=zed parent_link *joint_pose">
+    
+    <xacro:property name="model"    value="${camera_model}" />
+
+    <xacro:if value="${model == 'zed'}">
+        <xacro:property name="baseline" value="0.12" />
+        <xacro:property name="zoffset" value="0.015" />
+    </xacro:if>
+    <xacro:if value="${model == 'zedm'}">
+        <xacro:property name="baseline" value="0.06" />
+        <xacro:property name="zoffset" value="0.01325" />
+    </xacro:if>
+    <xacro:if value="${model == 'zed2'}">
+        <xacro:property name="baseline" value="0.12" />
+        <xacro:property name="zoffset" value="0.015" />
+    </xacro:if>
+
+    <!-- Camera Center -->
+        <joint name="${camera_name}_camera_base_joint" type="fixed">
+            <parent link="${parent_link}"/>
+            <child link="${camera_name}_camera_base"/>
+            <xacro:insert_block name="joint_pose"/>
+        </joint>
+
+        <link name="${camera_name}_camera_base" />
+
+        <joint name="${camera_name}_camera_center_joint" type="fixed">
+            <parent link="${camera_name}_camera_base"/>
+            <child link="${camera_name}_camera_center"/>
+            <origin xyz="0 0 ${zoffset}" rpy="0 0 0"/>
+        </joint>
+
+        <link name="${camera_name}_camera_center">
+            <visual>
+                <origin xyz="0 0 0" rpy="0 0 0"/>
+                <geometry>
+                    <mesh filename="package://zed_camera_description/meshes/${model}.stl" />
+                </geometry>
+                <material name="${model}_mat" />
+            </visual>
+        </link>
+
+    <!-- Left Camera -->
+        <joint name="${camera_name}_left_camera_joint" type="fixed">
+            <parent link="${camera_name}_camera_center"/>
+            <child link="${camera_name}_left_camera_frame"/>
+            <origin xyz="0 ${baseline/2} 0" rpy="0 0 0" />
+        </joint>
+
+        <link name="${camera_name}_left_camera_frame" />
+
+        <joint name="${camera_name}_left_camera_optical_joint" type="fixed">
+            <origin xyz="0 0 0" rpy="-${M_PI/2} 0.0 -${M_PI/2}"/>
+            <parent link="${camera_name}_left_camera_frame"/>
+            <child link="${camera_name}_left_camera_optical_frame"/>
+        </joint>
+
+        <link name="${camera_name}_left_camera_optical_frame"/>
+
+    <!-- Right Camera -->
+        <joint name="${camera_name}_right_camera_joint" type="fixed">
+            <parent link="${camera_name}_camera_center"/>
+            <child link="${camera_name}_right_camera_frame"/>
+            <origin xyz="0 -${baseline/2} 0" rpy="0 0 0" />
+        </joint>
+
+        <link name="${camera_name}_right_camera_frame" />
+
+        <joint name="${camera_name}_right_camera_optical_joint" type="fixed">
+            <origin xyz="0 0 0" rpy="-${M_PI/2} 0.0 -${M_PI/2}"/>
+            <parent link="${camera_name}_right_camera_frame"/>
+            <child link="${camera_name}_right_camera_optical_frame"/>
+        </joint>
+
+        <link name="${camera_name}_right_camera_optical_frame"/>
+
+    <!-- ZED2 Sensors -->
+        <xacro:if value="${model == 'zed2'}">
+          <joint name="${camera_name}_mag_joint" type="fixed">
+              <parent link="${camera_name}_camera_center"/>
+              <child link="${camera_name}_mag_link"/>
+              <origin xyz="0 0 0" rpy="0 0 0" />
+          </joint>
+
+          <link name="${camera_name}_mag_link" />
+
+          <joint name="${camera_name}_baro_joint" type="fixed">
+              <parent link="${camera_name}_camera_center"/>
+              <child link="${camera_name}_baro_link"/>
+              <origin xyz="0 0 0" rpy="0 0 0" />
+          </joint>
+
+          <link name="${camera_name}_baro_link" />
+
+          <joint name="${camera_name}_temp_left_joint" type="fixed">
+              <parent link="${camera_name}_left_camera_frame"/>
+              <child link="${camera_name}_temp_left_link"/>
+              <origin xyz="0 0 0" rpy="0 0 0" />
+          </joint>
+
+          <link name="${camera_name}_temp_left_link" />
+
+          <joint name="${camera_name}_temp_right_joint" type="fixed">
+              <parent link="${camera_name}_right_camera_frame"/>
+              <child link="${camera_name}_temp_right_link"/>
+              <origin xyz="0 0 0" rpy="0 0 0" />
+          </joint>
+
+          <link name="${camera_name}_temp_right_link" />
+            
+          <gazebo>
+            <plugin name="${camera_name}_imu_controller" filename="libhector_gazebo_ros_imu.so">
+              <robotNamespace>${camera_name}</robotNamespace>
+              <updateRate>5.0</updateRate>
+              <bodyName>${camera_name}_mag_link</bodyName>
+              <topicName>imu/data</topicName>
+              <frameId>${camera_name}_mag_link</frameId>
+              <accelDrift>0.005 0.005 0.005</accelDrift>
+              <accelGaussianNoise>0.005 0.005 0.005</accelGaussianNoise>
+              <rateDrift>0.005 0.005 0.005 </rateDrift>
+              <rateGaussianNoise>0.005 0.005 0.005 </rateGaussianNoise>
+              <headingDrift>0.005</headingDrift>
+              <headingGaussianNoise>0.005</headingGaussianNoise>
+            </plugin>
+          </gazebo>
+        </xacro:if>
+
+
+        <!-- stereo camera plugin -->
+    <gazebo reference="${camera_name}_camera_center">
+      <turnGravityOff>false</turnGravityOff>
+      <sensor type="multicamera" name="${camera_name}">
+        <update_rate>20.0</update_rate>
+        <camera name="left">
+          <pose>0 ${baseline/2} 0 0 0 0</pose>
+          <horizontal_fov>1.3962634</horizontal_fov>
+          <image>
+            <width>1280</width>
+            <height>720</height>
+            <format>R8G8B8</format>
+          </image>
+          <clip>
+            <near>0.08</near>
+            <far>300</far>
+          </clip>
+          <noise>
+            <type>gaussian</type>
+            <mean>0.0</mean>
+            <stddev>0.007</stddev>
+          </noise>
+        </camera>
+        <camera name="right">
+          <pose>0 -${baseline/2} 0 0 0 0</pose>
+          <horizontal_fov>1.3962634</horizontal_fov>
+          <image>
+            <width>1280</width>
+            <height>720</height>
+            <format>R8G8B8</format>
+          </image>
+          <clip>
+            <near>0.08</near>
+            <far>300</far>
+          </clip>
+          <noise>
+            <type>gaussian</type>
+            <mean>0.0</mean>
+            <stddev>0.007</stddev>
+          </noise>
+        </camera>
+        <plugin name="${camera_name}_controller" filename="libgazebo_ros_multicamera.so">
+          <alwaysOn>true</alwaysOn>
+          <updateRate>20.0</updateRate>
+          <cameraName>${camera_name}</cameraName>
+          <imageTopicName>image_raw</imageTopicName>
+          <cameraInfoTopicName>camera_info</cameraInfoTopicName>
+          <frameName>${camera_name}_left_camera_optical_frame</frameName>
+          <hackBaseline>${baseline}</hackBaseline>
+          <distortionK1>0.0</distortionK1>
+          <distortionK2>0.0</distortionK2>
+          <distortionK3>0.0</distortionK3>
+          <distortionT1>0.0</distortionT1>
+          <distortionT2>0.0</distortionT2>
+        </plugin>
+      </sensor>
+    </gazebo>
+
+
+    </xacro:macro>
+
+</robot>

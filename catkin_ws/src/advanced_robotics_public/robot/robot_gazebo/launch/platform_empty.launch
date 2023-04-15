@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<launch>
+
+
+  <arg name="x" default="0.0"/>
+  <arg name="y" default="0.0"/>
+  <arg name="z" default="0.0"/>
+  <arg name="yaw" default="0.0"/>
+  
+
+  <arg name="robot_namespace" default="/"/>
+
+  <arg name="imu_enabled" default="false"/>
+  <arg name="stereo_camera_enabled" default="true"/>
+  <arg name="hazard_cam_front_enabled" default="true"/>
+  <arg name="hazard_cam_rear_enabled" default="true"/>
+  <arg name="depth_camera_enabled" default="false"/>
+  <arg name="gps_enabled" default="false"/>
+  <arg name="front_laser_enabled" default="true" />
+  <arg name="front_cloud_enabled" default="false" />
+  <arg name="rear_cloud_enabled" default="false" />
+
+  <arg name="world_name" default="worlds/empty.world"/>
+
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(arg world_name)"/>
+    <arg name="verbose" value="true" />
+    <arg name="paused" value="true" />
+  </include>
+
+  <!-- <node pkg="kinematic_model" type="kinematic_model.py" name="kinematic_model" 
+  output="screen"/> -->
+
+  <include file="$(find robot_gazebo)/launch/spawn_robot.launch">
+    <arg name="robot_namespace" default="$(arg robot_namespace)"/>
+    <arg name="imu_enabled" value="$(arg imu_enabled)"/>
+    <arg name="stereo_camera_enabled" value="$(arg stereo_camera_enabled)"/>
+    <arg name="hazard_cam_front_enabled" value="$(arg hazard_cam_front_enabled)"/>
+    <arg name="hazard_cam_rear_enabled" value="$(arg hazard_cam_rear_enabled)"/>
+    <arg name="depth_camera_enabled" value="$(arg depth_camera_enabled)"/>
+    <arg name="gps_enabled" value="$(arg gps_enabled)"/>
+    <arg name="front_laser_enabled" value="$(arg front_laser_enabled)"/>
+    <arg name="front_cloud_enabled" value="$(arg front_cloud_enabled)"/>
+    <arg name="rear_cloud_enabled" value="$(arg rear_cloud_enabled)"/>
+    <arg name="x" value="$(arg x)"/>
+    <arg name="y" value="$(arg y)"/>
+    <arg name="z" value="$(arg z)"/>
+    <arg name="yaw" value="$(arg yaw)"/>
+  </include>
+  
+  <!-- <include file="$(find robot_gazebo)/launch/utils.launch" /> -->
+
+</launch>
